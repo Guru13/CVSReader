@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="CVSReader:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="CVSReader.war">
-      <element id="artifact" artifact-name="CVSReader:war exploded" />
-    </root>
-  </artifact>
-</component>
