@@ -64,4 +64,9 @@ public class UserServiceImpl implements UserService{
     public List<User> values(int offset, int noOfRecords, String compareMethod, UserDAO userDAO) {
         return userDAO.values(offset, noOfRecords, compareMethod);
     }
+
+    @Override
+    public void addAllUsers(List<User> users) {
+        userDAO.addAllUsers(users);
+    }
 }

@@ -223,6 +223,24 @@ public class UserDAOImpl implements UserDAO {
         return getAllUsers().size();
     }
 
+    @Override
+    public void addAllUsers(List<User> users) {
+        try (Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(SQL_INSERT);) {
+            for (User user : users) {
+                statement.setString(1, user.getName());
+                statement.setString(2, user.getSurName());
+                statement.setString(3, user.getLogin());
+                statement.setString(4, user.getEmail());
+                statement.setString(5, user.getPhoneNumber());
+                statement.addBatch(SQL_INSERT);
+            }
+            statement.executeBatch();
+        } catch (ClassNotFoundException | SQLException e) {
+            logger.error("Could not connection to db", e);
+            e.printStackTrace();
+        }
+    }
+
     /**
      * Inner class for compare data by name in database
      */

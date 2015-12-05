@@ -15,4 +15,5 @@ public interface UserDAO {
     boolean userExistLogin(User user);
     boolean userExist(User user);
     long getNoOfRecords();
+    void addAllUsers(List<User> users);
 }
