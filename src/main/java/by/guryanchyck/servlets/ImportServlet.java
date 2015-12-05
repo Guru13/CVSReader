@@ -39,9 +39,9 @@ public class ImportServlet extends HttpServlet {
         ServletInputStream in = request.getInputStream();
         BufferedInputStream bis = new BufferedInputStream(in);
 
-        String data = importService.readData(bis);
-        String[] dataArray = importService.dataToArray(data);
-
+//        String data = importService.readData(bis);
+//        String[] dataArray = importService.dataToArray(data);
+        String[] dataArray = readDataToArray(bis);
         if (dataArray.length <= 6) {
             request.setAttribute("message", "empty");
             RequestDispatcher dispatcher = request.getRequestDispatcher("views/importContacts.jsp");
@@ -52,13 +52,12 @@ public class ImportServlet extends HttpServlet {
         response.sendRedirect("views/successImport.jsp");
     }
 
-    /**
-     * It is performed when the servlet stops its existence.
-     * It used to carry out finalizing actions.
-     */
-    @Override
-    public void destroy() {
-        super.destroy();
-//        dao.close();
+    private String[] readDataToArray(BufferedInputStream bis) throws IOException {
+        StringBuffer data = new StringBuffer();
+        int bit;
+        while ((bit = bis.read()) != -1) {
+            data.append((char) bit);
+        }
+        return new String(data).split("\n");
     }
 }

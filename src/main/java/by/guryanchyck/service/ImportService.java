@@ -13,10 +13,6 @@ import java.io.IOException;
  */
 public interface ImportService {
 
-     String[] dataToArray(String data);
-
-     String readData(BufferedInputStream bis) throws IOException;
-
      void addUserToDB(String[] dataArray);
 
      void setUserService(UserService userService);

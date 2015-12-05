@@ -19,20 +19,6 @@ public class ImportServiceImpl implements ImportService {
 
     private UserService userService;
 
-
-    public String readData(BufferedInputStream bis) throws IOException {
-        StringBuffer data = new StringBuffer();
-        int bit;
-        while ((bit = bis.read()) != -1) {
-            data.append((char) bit);
-        }
-        return new String(data);
-    }
-
-    public String[] dataToArray(String data) {
-        return data.split("\n");
-    }
-
     public void addUserToDB(String[] dataArray) {
         for (int i = 4; i < dataArray.length - 1; i++) {
             String[] columns = dataArray[i].split(";");
