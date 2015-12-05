@@ -1,6 +1,7 @@
 package by.guryanchyck.db;
 
 import by.guryanchyck.service.Settings;
+import org.apache.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,6 +14,8 @@ import java.sql.SQLException;
  */
 public class ConnectionFactory {
 
+    private final static Logger logger = Logger.getLogger(ConnectionFactory.class);
+
     private static ConnectionFactory instance = new ConnectionFactory();
     private final Settings settings;
 
@@ -22,6 +25,7 @@ public class ConnectionFactory {
         try {
             Class.forName(settings.value("jdbc.driver_class"));
         } catch (ClassNotFoundException e) {
+            logger.error("Could not connection to db", e);
             e.printStackTrace();
         }
     }

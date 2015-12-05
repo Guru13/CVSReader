@@ -2,9 +2,11 @@ package by.guryanchyck.dao;
 
 import by.guryanchyck.db.ConnectionFactory;
 import by.guryanchyck.entity.User;
+import org.apache.log4j.Logger;
 
 import java.sql.*;
 import java.util.*;
+
 
 /**
  * Created by Alexey Guryanchyck on 30.08.2015.
@@ -14,6 +16,7 @@ import java.util.*;
  */
 public class UserDAOImpl implements UserDAO {
 
+    private final static Logger logger = Logger.getLogger(UserDAOImpl.class);
 
     private static final String SQL_GET_USERS_WITH_LIMIT = "SELECT name, surname, login, email, phoneNumber FROM user limit ";
     private static final String SQL_GET_USERS = "SELECT name, surname, login, email, phoneNumber FROM user;";
@@ -54,6 +57,7 @@ public class UserDAOImpl implements UserDAO {
             }
 
         } catch (ClassNotFoundException | SQLException e) {
+            logger.error("Could not connection to db", e);
             e.printStackTrace();
         }
 
@@ -109,6 +113,7 @@ public class UserDAOImpl implements UserDAO {
                 listUsers.add(user);
             }
         } catch (ClassNotFoundException | SQLException e) {
+            logger.error("Could not connection to db", e);
             e.printStackTrace();
         }
 
@@ -146,6 +151,7 @@ public class UserDAOImpl implements UserDAO {
             statement.setString(5, user.getPhoneNumber());
             statement.executeUpdate();
         } catch (ClassNotFoundException | SQLException e) {
+            logger.error("Could not connection to db", e);
             e.printStackTrace();
         }
     }
@@ -166,6 +172,7 @@ public class UserDAOImpl implements UserDAO {
             statement.setString(5, user.getLogin());
             statement.executeUpdate();
         } catch (ClassNotFoundException | SQLException e) {
+            logger.error("Could not connection to db", e);
             e.printStackTrace();
         }
     }
