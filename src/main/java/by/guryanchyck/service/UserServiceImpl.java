@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class UserServiceImpl implements UserService{
 
-    private UserDAO userDAO = new UserDAOImpl();
+    private UserDAO userDAO;
 
 
     public void addUser(User user) {
@@ -37,5 +37,10 @@ public class UserServiceImpl implements UserService{
     @Override
     public long getNoOfRecords() {
         return userDAO.getNoOfRecords();
+    }
+
+
+    public void setUserDAO(UserDAO userDAO) {
+        this.userDAO = userDAO;
     }
 }

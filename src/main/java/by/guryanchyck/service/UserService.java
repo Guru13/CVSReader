@@ -20,4 +20,6 @@ public interface UserService {
     void addAllUsers(List<User> users);
 
     long getNoOfRecords();
+
+    void setUserDAO(UserDAO userDAO);
 }

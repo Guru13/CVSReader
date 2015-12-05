@@ -17,14 +17,6 @@ public class ImportServiceImpl implements ImportService {
 
     private final int columnCount = 5;
 
-    public UserService getUserService() {
-        return userService;
-    }
-
-    public void setUserService(UserService userService) {
-        this.userService = userService;
-    }
-
     private UserService userService;
 
 
@@ -54,10 +46,12 @@ public class ImportServiceImpl implements ImportService {
             String email = columns[3];
             String phoneNumber = columns[4];
             User user = new User(name, surname, login, email, phoneNumber);
-            getUserService().addUser(user);
-//            userService.addUser(user);
+            userService.addUser(user);
         }
     }
 
+    public void setUserService(UserService userService) {
+        this.userService = userService;
+    }
 
 }
