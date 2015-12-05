@@ -1,14 +1,10 @@
 package by.guryanchyck.db;
 
-import by.guryanchyck.dao.UserDAO;
-import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.sql.SQLException;
-
-import static org.junit.Assert.*;
 
 /**
  * Alexey Guryanchyck on 30.08.2015.

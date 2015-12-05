@@ -11,7 +11,7 @@
     <input type="submit" value="import"/>
 </form>
 <c:if test="${message.equals('empty')}">
-    <h3>File is empty. Choose another file.</h3>
+    <h3>File is empty. Choose another file or go to menu.</h3>
 </c:if>
 <br/>
 <a href="${pageContext.servletContext.contextPath}/index.jsp">back to menu</a>

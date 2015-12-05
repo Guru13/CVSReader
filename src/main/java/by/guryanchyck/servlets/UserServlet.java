@@ -1,7 +1,10 @@
 package by.guryanchyck.servlets;
 
 import by.guryanchyck.dao.UserDAO;
+import by.guryanchyck.dao.UserDAOImpl;
 import by.guryanchyck.entity.User;
+import by.guryanchyck.service.UserService;
+import by.guryanchyck.service.UserServiceImpl;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -21,6 +24,7 @@ public class UserServlet extends HttpServlet {
 
     private String sortedMethod ;
     private UserDAO dao;
+    private UserService userService;
 
     /**
      * Carries out http-servlet's request in the case of {@code post} request.
@@ -44,17 +48,17 @@ public class UserServlet extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        sortedMethod = request.getParameter("sortedMethod");
+        userService = new UserServiceImpl();
+        sortedMethod = userService.getSortedMethod(request);
 
-        if (sortedMethod == null){
-            sortedMethod = "name";
-        }
+
         int page = 1;
         int recordsPerPage = 10;
         if (request.getParameter("page") != null) {
             page = Integer.parseInt(request.getParameter("page"));
         }
-        dao = new UserDAO();
+        dao = new UserDAOImpl();
+
 
             List<User> listUsers = dao.values((page - 1) * recordsPerPage, recordsPerPage, sortedMethod);
 
@@ -66,7 +70,7 @@ public class UserServlet extends HttpServlet {
             request.setAttribute("noOfPages", noOfPages);
             request.setAttribute("currentPage", page);
             request.setAttribute("sortedMethod", sortedMethod);
-
+//            userService.go(request);
         RequestDispatcher view = request.getRequestDispatcher("views/displayUser.jsp");
         view.forward(request, response);
     }
