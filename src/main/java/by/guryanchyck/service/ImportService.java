@@ -17,5 +17,7 @@ public interface ImportService {
 
      String readData(BufferedInputStream bis) throws IOException;
 
-     void addUserToDB(String[] dataArray, UserService userService);
+     void addUserToDB(String[] dataArray);
+
+     void setUserService(UserService userService);
 }

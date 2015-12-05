@@ -56,11 +56,11 @@ public class UserServlet extends HttpServlet {
             page = Integer.parseInt(request.getParameter("page"));
         }
 
-        UserDAO userDAO = (UserDAO) getServletContext().getAttribute("userDAO");
+//        UserDAO userDAO = (UserDAO) getServletContext().getAttribute("userDAO");
 
-//        List<User> listUsers = userDAO.values((page - 1) * recordsPerPage, recordsPerPage, sortedMethod);
-        List<User> listUsers = userService.values((page - 1) * recordsPerPage, recordsPerPage, sortedMethod, userDAO);
-        long noOfRecords = userDAO.getNoOfRecords();
+        List<User> listUsers = userService.values((page - 1) * recordsPerPage, recordsPerPage, sortedMethod);
+
+        long noOfRecords = userService.getNoOfRecords();
 
         int noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
 

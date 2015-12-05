@@ -15,7 +15,9 @@ public interface UserService {
 
     String getSortedMethod(String sortedMethod);
 
-    List<User> values(int offset, int noOfRecords, String compareMethod, UserDAO userDAO);
+    List<User> values(int offset, int noOfRecords, String compareMethod);
 
     void addAllUsers(List<User> users);
+
+    long getNoOfRecords();
 }

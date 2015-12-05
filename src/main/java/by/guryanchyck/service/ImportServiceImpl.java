@@ -17,6 +17,15 @@ public class ImportServiceImpl implements ImportService {
 
     private final int columnCount = 5;
 
+    public UserService getUserService() {
+        return userService;
+    }
+
+    public void setUserService(UserService userService) {
+        this.userService = userService;
+    }
+
+    private UserService userService;
 
 
     public String readData(BufferedInputStream bis) throws IOException {
@@ -32,7 +41,7 @@ public class ImportServiceImpl implements ImportService {
         return data.split("\n");
     }
 
-    public void addUserToDB(String[] dataArray, UserService userService) {
+    public void addUserToDB(String[] dataArray) {
         for (int i = 4; i < dataArray.length - 1; i++) {
             String[] columns = dataArray[i].split(";");
 
@@ -45,7 +54,8 @@ public class ImportServiceImpl implements ImportService {
             String email = columns[3];
             String phoneNumber = columns[4];
             User user = new User(name, surname, login, email, phoneNumber);
-            userService.addUser(user);
+            getUserService().addUser(user);
+//            userService.addUser(user);
         }
     }
 

@@ -47,8 +47,7 @@ public class ImportServlet extends HttpServlet {
             RequestDispatcher dispatcher = request.getRequestDispatcher("views/importContacts.jsp");
             dispatcher.forward(request, response);
         }
-        UserService userService = (UserService) getServletContext().getAttribute("userService");
-        importService.addUserToDB(dataArray, userService);
+        importService.addUserToDB(dataArray);
 
         response.sendRedirect("views/successImport.jsp");
     }
