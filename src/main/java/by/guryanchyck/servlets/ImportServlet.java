@@ -8,6 +8,7 @@ import by.guryanchyck.service.UserServiceImpl;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.ServletInputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -35,9 +36,19 @@ public class ImportServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         ImportService importService = (ImportService)getServletContext().getAttribute("importService");
+        ServletInputStream in = request.getInputStream();
+        BufferedInputStream bis = new BufferedInputStream(in);
 
+        String data = importService.readData(bis);
+        String[] dataArray = importService.dataToArray(data);
 
-        importService.importData(request, response);
+        if (dataArray.length <= 6) {
+            request.setAttribute("message", "empty");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("views/importContacts.jsp");
+            dispatcher.forward(request, response);
+        }
+        UserService userService = (UserService) getServletContext().getAttribute("userService");
+        importService.addUserToDB(dataArray, userService);
 
         response.sendRedirect("views/successImport.jsp");
     }
