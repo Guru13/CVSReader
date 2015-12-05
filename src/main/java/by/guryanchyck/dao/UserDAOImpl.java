@@ -18,12 +18,14 @@ public class UserDAOImpl implements UserDAO {
 
     private final static Logger logger = Logger.getLogger(UserDAOImpl.class);
 
-    private static final String SQL_GET_USERS_WITH_LIMIT = "SELECT name, surname, login, email, phoneNumber FROM user limit ";
+    //    private static final String SQL_GET_USERS_WITH_LIMIT = "SELECT name, surname, login, email, phoneNumber FROM user limit ";
+    private static final String SQL_GET_USERS_WITH_LIMIT = "SELECT name, surname, login, email, phoneNumber FROM user LIMIT ?, ? ";
     private static final String SQL_GET_USERS = "SELECT name, surname, login, email, phoneNumber FROM user;";
     private static final String SQL_INSERT = "INSERT INTO user (name, surname, login, email, phoneNumber) VALUES (?,?,?,?,?);";
     private static final String SQL_UPDATE = "UPDATE user SET name = ?, surname = ?, email = ?, phoneNumber = ? WHERE login = ?;";
 
     public UserDAOImpl() {
+
     }
 
     private static Connection getConnection() throws SQLException, ClassNotFoundException {
@@ -40,22 +42,30 @@ public class UserDAOImpl implements UserDAO {
      */
     public List<User> values(int offset, int noOfRecords, String compareMethod) {
 
-        String query = SQL_GET_USERS_WITH_LIMIT + offset + ", " + noOfRecords;
         List<User> listUsers = new ArrayList<User>();
         User user = null;
-        try (Connection connection = getConnection(); Statement stmt = connection.createStatement();
-             ResultSet rs = stmt.executeQuery(query)) {
+        try (Connection connection = getConnection();
 
-            while (rs.next()) {
-                user = new User();
-                user.setName(rs.getString("name"));
-                user.setSurName(rs.getString("surname"));
-                user.setLogin(rs.getString("login"));
-                user.setEmail(rs.getString("email"));
-                user.setPhoneNumber(rs.getString("phoneNumber"));
-                listUsers.add(user);
+             PreparedStatement statement = connection.prepareStatement(SQL_GET_USERS_WITH_LIMIT);) {
+
+            statement.setInt(1, offset);
+            statement.setInt(2, noOfRecords);
+
+            try (ResultSet rs = statement.executeQuery()) {
+
+                while (rs.next()) {
+                    user = new User();
+                    user.setName(rs.getString("name"));
+                    user.setSurName(rs.getString("surname"));
+                    user.setLogin(rs.getString("login"));
+                    user.setEmail(rs.getString("email"));
+                    user.setPhoneNumber(rs.getString("phoneNumber"));
+
+                    listUsers.add(user);
+                }
+            }catch (SQLException e){
+                logger.error("Could not execute result set", e);
             }
-
         } catch (ClassNotFoundException | SQLException e) {
             logger.error("Could not connection to db", e);
             e.printStackTrace();
@@ -101,8 +111,8 @@ public class UserDAOImpl implements UserDAO {
         List<User> listUsers = new ArrayList<User>();
         User user = null;
 
-        try(Connection connection = getConnection(); Statement stmt = connection.createStatement();
-        ResultSet rs = stmt.executeQuery(query)){
+        try (Connection connection = getConnection(); Statement statement = connection.createStatement();
+             ResultSet rs = statement.executeQuery(query)) {
             while (rs.next()) {
                 user = new User();
                 user.setName(rs.getString("name"));
@@ -142,7 +152,7 @@ public class UserDAOImpl implements UserDAO {
      */
     private void userInsert(User user) {
 
-        try(Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(SQL_INSERT);){
+        try (Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(SQL_INSERT);) {
 
             statement.setString(1, user.getName());
             statement.setString(2, user.getSurName());
@@ -164,7 +174,7 @@ public class UserDAOImpl implements UserDAO {
      */
     private void userUpdate(User user) {
 
-        try(Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(SQL_UPDATE);){
+        try (Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(SQL_UPDATE);) {
             statement.setString(1, user.getName());
             statement.setString(2, user.getSurName());
             statement.setString(3, user.getEmail());
