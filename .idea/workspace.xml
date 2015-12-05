@@ -1,136 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e2c8e38-3df6-4391-8474-0e7bdc831f1a" name="Default" comment="check check check">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/Clinic-pet-web/Clinic-pet-web.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V3/src/main/java/by/guru13/models/clinic/Clinic.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V3/src/main/webapp/views/clinic/ClinicView.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/.idea/artifacts/Clinic_pet_web_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/.idea/artifacts/Clinic_pet_web_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/Clinic-pet-web/src/main/webapp/views/user/CreateUser.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../databaseexam/src/main/java/by/guru13/database/DBWorker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V3/src/main/java/by/guru13/servlets/DeleteClientServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V3/src/main/java/by/guru13/servlets/EditClientServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/Clinic-pet-web/src/main/webapp/views/user/EditUser.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/Clinic-pet-web/src/main/java/by/guru13/store/JdbcStorage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/Clinic-pet-web/src/test/java/by/guru13/store/JdbcStorageTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../databaseexam/src/main/java/by/guru13/database/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../databaseexam/src/main/java/by/guru13/database/MainPostgres.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ServletExampl/src/main/java/by/guru13/servlet/MainServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/.idea/libraries/Maven__commons_lang_commons_lang_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/.idea/libraries/Maven__commons_lang_commons_lang_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ServletExampl/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/.idea/libraries/Maven__jstl_jstl_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/.idea/libraries/Maven__jstl_jstl_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ServletExampl/.idea/libraries/Maven__junit_junit_3_8_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../databaseexam/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_36.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_36.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/.idea/libraries/Maven__org_codehaus_plexus_plexus_utils_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/.idea/libraries/Maven__org_codehaus_plexus_plexus_utils_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/.idea/libraries/Maven__org_mockito_mockito_all_1_10_19.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/.idea/libraries/Maven__org_mockito_mockito_all_1_10_19.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../databaseexam/.idea/libraries/Maven__postgresql_postgresql_9_1_901_1_jdbc4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/.idea/libraries/Maven__postgresql_postgresql_9_1_901_jdbc3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/.idea/libraries/Maven__postgresql_postgresql_9_1_901_jdbc3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/.idea/libraries/Maven__taglibs_standard_1_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/.idea/libraries/Maven__taglibs_standard_1_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/Clinic-pet-web/src/main/java/by/guru13/store/MemoryStorage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ServletExampl/.idea/artifacts/ServletExampl_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ServletExampl/.idea/artifacts/ServletExampl_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/Clinic-pet-web/src/main/java/by/guru13/service/Settings.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/Clinic-pet-web/src/main/java/by/guru13/store/Storage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/Clinic-pet-web/src/main/java/by/guru13/models/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../databaseexam/src/main/java/by/guru13/database/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/Clinic-pet-web/src/test/java/by.guru13.servlets/UserCRUDServletTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/Clinic-pet-web/src/main/java/by/guru13/store/UserCashe.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/Clinic-pet-web/src/main/java/by/guru13/servlets/UserCreateServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/Clinic-pet-web/src/main/java/by/guru13/servlets/UserDeleteServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/Clinic-pet-web/src/main/java/by/guru13/servlets/UserEditServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/Clinic-pet-web/src/main/webapp/views/user/UserView.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/Clinic-pet-web/src/main/java/by/guru13/servlets/UserViewServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/Clinic-pet-web/src/main/webapp/views/clinicview/clinic.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/.idea/artifacts/clinic_pet_web_Web_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/.idea/artifacts/clinic_pet_web_war_exploded2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V3/src/main/webapp/css/clinicview.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../databaseexam/.idea/dataSources.local.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/.idea/dataSources.local.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../databaseexam/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library_3/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V3/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../databaseexam/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/Clinic-pet-web/src/main/resources/guru13.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/src/main/resources/guru13.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library_3/.idea/libraries/jstl_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library_3/src/java/resources/library.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/library4.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/.idea/artifacts/library4_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library_2/web/pages/main.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ServletExampl/src/main/webapp/mypage.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library_3/.idea/libraries/mysql_connector_java_5_1_36.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/Clinic-pet-web/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/se/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library_3/.idea/sqldialects.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library_2/web/css/style_index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library_2/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/src/main/webapp/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../library4/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../WebPetClinic_V2/wpc.iml" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\ArgRunner.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\CVSReader\src\main\java\by\guryanchyck\dao\userDAO2.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\Calculate.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\Calculator.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\CalculatorTest.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\InteractRunner.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\clinic\Cat.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\clinic\Client.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\clinic\Clinic.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\clinic\ClinicRunner.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\clinic\Dog.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\clinic\Parot.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\clinic\Pet.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\javaCourses\.idea\artifacts\clinic_pet_web_ear_exploded.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\javaCourses\.idea\artifacts\clinic_pet_web_war_exploded2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\javaCourses\.idea\artifacts\df_war_exploded.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\javaCourses\.idea\artifacts\fff_war_exploded.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\javaCourses\src\by\guru13\lessons\lesson13\BaseAction.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\javaCourses\src\by\guru13\lessons\lesson13\Board.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\javaCourses\src\by\guru13\lessons\lesson13\Cell.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\javaCourses\src\by\guru13\lessons\lesson13\GeneratorBoard.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\javaCourses\src\by\guru13\lessons\lesson13\SaperLogic.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\javaCourses\src\by\guru13\lessons\lesson13\UserAction.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\javaCourses\src\by\guru13\lessons\lesson13\console\ConsoleBoard.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\javaCourses\src\by\guru13\lessons\lesson13\console\ConsoleCell.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\javaCourses\src\by\guru13\lessons\lesson13\logic\Easy.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\javaCourses\src\by\guru13\lessons\package-info.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\javaCourses\src\main\java\by\guru13\lessons\lesson13\gui\GUIAction.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\javaCourses\src\main\java\by\guru13\lessons\lesson13\gui\GUIBoard.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\javaCourses\src\main\java\by\guru13\lessons\lesson13\gui\GUICell.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\javaCourses\src\main\java\by\guru13\lessons\lesson13\gui\Main.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\javaCourses\src\test\java\by\guru13\lessons\lesson13\BaseActionTest.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\java-courses\src\test\java\by\guru13\lesson\lessons\calculator\CalculatorTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../javaCourses/clinic-pet-web/target/ClinicPetWeb/WEB-INF/classes/by/guru13/servlets/ClinicServlet.class" afterPath="$PROJECT_DIR$/../javaCourses/clinic-pet-web/target/ClinicPetWeb/WEB-INF/classes/by/guru13/servlets/ClinicServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../javaCourses/clinic-pet-web/target/classes/by/guru13/servlets/ClinicServlet.class" afterPath="$PROJECT_DIR$/../javaCourses/clinic-pet-web/target/classes/by/guru13/servlets/ClinicServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../javaCourses/clinic-pet-web/src/main/java/by/guru13/servlets/ClinicServlet.java" afterPath="$PROJECT_DIR$/../javaCourses/clinic-pet-web/src/main/java/by/guru13/servlets/ClinicServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../calculator_Maven/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../calculator_Maven/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../javaCourses/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../javaCourses/.idea/workspace.xml" />
+    <list default="true" id="4e2c8e38-3df6-4391-8474-0e7bdc831f1a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/log4j.properties" />
+      <change type="DELETED" beforePath="C:\projects\java-courses\CVSReader\.idea\libraries\Maven__postgresql_postgresql_9_1_901_1_jdbc4.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/CSVWorker_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/CSVWorker_war.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/CSVWorker_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/CSVWorker_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
+    <list id="2c307e0b-a6bc-48da-9934-b1e258d39a81" name="New changelist" comment="kkk" />
     <ignored path="CVSReader.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -177,47 +63,70 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/entity/User.java">
+      <file leaf-file-name="UserDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/dao/UserDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="149" column="8" selection-start-line="149" selection-start-column="8" selection-end-line="149" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/dao/UserDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6005435">
-              <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+              <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="58" />
               <folding>
-                <marker date="1441017933408" expanded="true" signature="485:548" placeholder="SELECT name,..user..." />
-                <marker date="1441017933408" expanded="true" signature="601:658" placeholder="SELECT name,..user..." />
-                <marker date="1441017933408" expanded="true" signature="708:786" placeholder="INSERT INTO ..." />
-                <marker date="1441017933408" expanded="true" signature="836:917" placeholder="UPDATE user ..." />
-                <marker date="1441017933408" expanded="true" signature="1550:1552" placeholder="SELECT name,..user..." />
+                <element signature="imports" expanded="true" />
+                <element signature="e#7046#7047#0" expanded="true" />
+                <element signature="e#7089#7090#0" expanded="true" />
+                <element signature="e#7272#7273#0" expanded="true" />
+                <element signature="e#7339#7340#0" expanded="true" />
+                <element signature="e#7533#7534#0" expanded="true" />
+                <element signature="e#7606#7607#0" expanded="true" />
+                <element signature="e#7797#7798#0" expanded="true" />
+                <element signature="e#7866#7867#0" expanded="true" />
+                <element signature="e#8058#8059#0" expanded="true" />
+                <element signature="e#8127#8128#0" expanded="true" />
+                <element signature="e#8331#8332#0" expanded="true" />
+                <element signature="e#8412#8413#0" expanded="true" />
+                <marker date="1449333884902" expanded="true" signature="532:595" placeholder="SELECT name,..user..." />
+                <marker date="1449333884902" expanded="true" signature="648:705" placeholder="SELECT name,..user..." />
+                <marker date="1449333884902" expanded="true" signature="755:833" placeholder="INSERT INTO ..." />
+                <marker date="1449333884902" expanded="true" signature="883:964" placeholder="UPDATE user ..." />
+                <marker date="1449333884902" expanded="true" signature="1571:1573" placeholder="SELECT name,..user..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImportServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/servlets/ImportServlet.java">
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/service/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="importContacts.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/importContacts.jsp">
+      <file leaf-file-name="ImportServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/service/ImportServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImportServlet.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/servlets/ImportServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7769029">
+              <caret line="50" column="58" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Settings.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/service/Settings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -228,15 +137,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
-        <option value="Interface" />
         <option value="JUnit4 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="properties" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -248,7 +163,6 @@
       <list>
         <option value="$PROJECT_DIR$/CVSReader.iml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/by/guryanchyck/store/Storage.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/guryanchyck/store/UserStorage.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/guryanchyck/store/UserCashe.java" />
@@ -263,19 +177,28 @@
         <option value="$PROJECT_DIR$/src/main/webapp/views/error.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/by/guryanchyck/service/CSVWorker.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/showContacts.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/successImport.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/displayUser.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/by/guryanchyck/dao/PersonDAO.java" />
+        <option value="$PROJECT_DIR$/src/test/java/by/guryanchyck/db/ConnectionFactoryTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/by/guryanchyck/dao/UserDAOTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/guryanchyck/entity/User.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/importContacts.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/by/guryanchyck/listener/ContactDaoServiceListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/guryanchyck/servlets/ImportServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/guryanchyck/servlets/UserServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/guryanchyck/service/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/guryanchyck/service/ImportServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/guryanchyck/service/ImportService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/guryanchyck/dao/UserDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/guryanchyck/listener/UserServiceListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/guryanchyck/service/UserService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/log4j.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/by/guryanchyck/dao/UserDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/guryanchyck/db/ConnectionFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/guryanchyck/service/Settings.java" />
-        <option value="$PROJECT_DIR$/src/test/java/by/guryanchyck/db/ConnectionFactoryTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/guryanchyck/servlets/UserServlet.java" />
-        <option value="$PROJECT_DIR$/src/test/java/by/guryanchyck/dao/UserDAOTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/guryanchyck/servlets/ImportServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/guryanchyck/dao/UserDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/importContacts.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/by/guryanchyck/entity/User.java" />
       </list>
     </option>
   </component>
@@ -308,7 +231,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1378" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -334,6 +257,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -365,18 +289,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="by" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -392,57 +304,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="by" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="guryanchyck" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CVSReader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CVSReader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="by" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="guryanchyck" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
+              <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -465,6 +331,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CVSReader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CVSReader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -614,6 +514,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="listener" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CVSReader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CVSReader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="by" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guryanchyck" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="entity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -688,9 +622,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -712,9 +645,9 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.14965986" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../CVSWorker2" />
   </component>
   <component name="RecentsManager">
@@ -723,6 +656,9 @@
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projects\java-courses\CVSReader\src\main\webapp\WEB-INF\classes" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="by.guryanchyck.dao" />
@@ -1116,6 +1052,9 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Unknown" factoryName="Unknown">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -1233,6 +1172,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="4e2c8e38-3df6-4391-8474-0e7bdc831f1a" name="Default" comment="" />
+      <changelist id="2c307e0b-a6bc-48da-9934-b1e258d39a81" name="New changelist" comment="kkk" />
       <created>1440604107123</created>
       <option name="number" value="Default" />
       <updated>1440604107123</updated>
@@ -1246,7 +1186,12 @@
       <workItem from="1443208928690" duration="797000" />
       <workItem from="1448049416071" duration="1304000" />
       <workItem from="1448349959618" duration="3009000" />
-      <workItem from="1448980313193" duration="450000" />
+      <workItem from="1448980313193" duration="7119000" />
+      <workItem from="1449040905195" duration="19702000" />
+      <workItem from="1449120609157" duration="701000" />
+      <workItem from="1449230465305" duration="3290000" />
+      <workItem from="1449260704289" duration="3566000" />
+      <workItem from="1449302602527" duration="18458000" />
     </task>
     <task id="LOCAL-00001" summary="cvs reader only">
       <created>1448050000322</created>
@@ -1254,49 +1199,79 @@
       <option name="project" value="LOCAL" />
       <updated>1448050000322</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add listener">
+      <created>1449308427096</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1449308427096</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add dao to listener">
+      <created>1449310092337</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1449310092337</updated>
+    </task>
+    <task id="LOCAL-00004" summary="check check check">
+      <created>1449312401219</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1449312401219</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add try-with-resources">
+      <created>1449332344677</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1449332344677</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add logger">
+      <created>1449333901387</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1449333901387</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111540000" />
+    <option name="totallyTimeSpent" value="163926000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3265306" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32423207" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32764506" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35494882" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30546075" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2440273" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28096676" sideWeight="0.8633721" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28030303" sideWeight="0.8633721" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24981412" sideWeight="0.13662791" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32326284" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18181819" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Enso" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Enso" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Java2SQL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Java2SQL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TunnelliJ" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="544" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31862745" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Pomodoro" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="544" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31862745" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Pomodoro" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1312,8 +1287,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cvs reader only" />
+    <MESSAGE value="add listener" />
+    <MESSAGE value="add dao to listener" />
     <MESSAGE value="check check check" />
-    <option name="LAST_COMMIT_MESSAGE" value="check check check" />
+    <MESSAGE value="add try-with-resources" />
+    <MESSAGE value="add logger" />
+    <option name="LAST_COMMIT_MESSAGE" value="add logger" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1326,96 +1305,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/servlets/ImportServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/importContacts.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/servlets/ImportServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/importContacts.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/dao/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="262" column="34" selection-start-line="262" selection-start-column="34" selection-end-line="262" selection-end-column="34" />
-          <folding>
-            <marker date="1441017933408" expanded="true" signature="485:548" placeholder="SELECT name,..user..." />
-            <marker date="1441017933408" expanded="true" signature="601:658" placeholder="SELECT name,..user..." />
-            <marker date="1441017933408" expanded="true" signature="708:786" placeholder="INSERT INTO ..." />
-            <marker date="1441017933408" expanded="true" signature="836:917" placeholder="UPDATE user ..." />
-            <marker date="1441017933408" expanded="true" signature="1550:1552" placeholder="SELECT name,..user..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/by/guryanchyck/dao/UserDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/servlets/ImportServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/servlets/UserServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="16" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/44f1f731/ea88a427-7e18-490e-b255-f39a7403cda4/users..user">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/db/ConnectionFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1437,16 +1326,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/dao/UserDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/dao/UserDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="125" column="15" selection-start-line="125" selection-start-column="15" selection-end-line="125" selection-end-column="15" />
           <folding>
-            <marker date="1441017933408" expanded="true" signature="485:548" placeholder="SELECT name,..user..." />
-            <marker date="1441017933408" expanded="true" signature="601:658" placeholder="SELECT name,..user..." />
-            <marker date="1441017933408" expanded="true" signature="708:786" placeholder="INSERT INTO ..." />
-            <marker date="1441017933408" expanded="true" signature="836:917" placeholder="UPDATE user ..." />
-            <marker date="1441017933408" expanded="true" signature="1550:1552" placeholder="SELECT name,..user..." />
+            <element signature="imports" expanded="true" />
+            <element signature="e#7046#7047#0" expanded="true" />
+            <element signature="e#7089#7090#0" expanded="true" />
+            <element signature="e#7272#7273#0" expanded="true" />
+            <element signature="e#7339#7340#0" expanded="true" />
+            <element signature="e#7533#7534#0" expanded="true" />
+            <element signature="e#7606#7607#0" expanded="true" />
+            <element signature="e#7797#7798#0" expanded="true" />
+            <element signature="e#7866#7867#0" expanded="true" />
+            <element signature="e#8058#8059#0" expanded="true" />
+            <element signature="e#8127#8128#0" expanded="true" />
+            <element signature="e#8331#8332#0" expanded="true" />
+            <element signature="e#8412#8413#0" expanded="true" />
+            <marker date="1449333884902" expanded="true" signature="532:595" placeholder="SELECT name,..user..." />
+            <marker date="1449333884902" expanded="true" signature="648:705" placeholder="SELECT name,..user..." />
+            <marker date="1449333884902" expanded="true" signature="755:833" placeholder="INSERT INTO ..." />
+            <marker date="1449333884902" expanded="true" signature="883:964" placeholder="UPDATE user ..." />
+            <marker date="1449333884902" expanded="true" signature="1571:1573" placeholder="SELECT name,..user..." />
           </folding>
         </state>
       </provider>
@@ -1467,7 +1369,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1507,16 +1408,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/dao/UserDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/dao/UserDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="125" column="15" selection-start-line="125" selection-start-column="15" selection-end-line="125" selection-end-column="15" />
           <folding>
-            <marker date="1441017933408" expanded="true" signature="485:548" placeholder="SELECT name,..user..." />
-            <marker date="1441017933408" expanded="true" signature="601:658" placeholder="SELECT name,..user..." />
-            <marker date="1441017933408" expanded="true" signature="708:786" placeholder="INSERT INTO ..." />
-            <marker date="1441017933408" expanded="true" signature="836:917" placeholder="UPDATE user ..." />
-            <marker date="1441017933408" expanded="true" signature="1550:1552" placeholder="SELECT name,..user..." />
+            <element signature="imports" expanded="true" />
+            <element signature="e#7046#7047#0" expanded="true" />
+            <element signature="e#7089#7090#0" expanded="true" />
+            <element signature="e#7272#7273#0" expanded="true" />
+            <element signature="e#7339#7340#0" expanded="true" />
+            <element signature="e#7533#7534#0" expanded="true" />
+            <element signature="e#7606#7607#0" expanded="true" />
+            <element signature="e#7797#7798#0" expanded="true" />
+            <element signature="e#7866#7867#0" expanded="true" />
+            <element signature="e#8058#8059#0" expanded="true" />
+            <element signature="e#8127#8128#0" expanded="true" />
+            <element signature="e#8331#8332#0" expanded="true" />
+            <element signature="e#8412#8413#0" expanded="true" />
+            <marker date="1449333884902" expanded="true" signature="532:595" placeholder="SELECT name,..user..." />
+            <marker date="1449333884902" expanded="true" signature="648:705" placeholder="SELECT name,..user..." />
+            <marker date="1449333884902" expanded="true" signature="755:833" placeholder="INSERT INTO ..." />
+            <marker date="1449333884902" expanded="true" signature="883:964" placeholder="UPDATE user ..." />
+            <marker date="1449333884902" expanded="true" signature="1571:1573" placeholder="SELECT name,..user..." />
           </folding>
         </state>
       </provider>
@@ -1562,16 +1476,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/dao/UserDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/dao/UserDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1441017933408" expanded="true" signature="485:548" placeholder="SELECT name,..user..." />
-            <marker date="1441017933408" expanded="true" signature="601:658" placeholder="SELECT name,..user..." />
-            <marker date="1441017933408" expanded="true" signature="708:786" placeholder="INSERT INTO ..." />
-            <marker date="1441017933408" expanded="true" signature="836:917" placeholder="UPDATE user ..." />
-            <marker date="1441017933408" expanded="true" signature="1550:1552" placeholder="SELECT name,..user..." />
+            <element signature="imports" expanded="true" />
+            <element signature="e#7046#7047#0" expanded="true" />
+            <element signature="e#7089#7090#0" expanded="true" />
+            <element signature="e#7272#7273#0" expanded="true" />
+            <element signature="e#7339#7340#0" expanded="true" />
+            <element signature="e#7533#7534#0" expanded="true" />
+            <element signature="e#7606#7607#0" expanded="true" />
+            <element signature="e#7797#7798#0" expanded="true" />
+            <element signature="e#7866#7867#0" expanded="true" />
+            <element signature="e#8058#8059#0" expanded="true" />
+            <element signature="e#8127#8128#0" expanded="true" />
+            <element signature="e#8331#8332#0" expanded="true" />
+            <element signature="e#8412#8413#0" expanded="true" />
+            <marker date="1449333884902" expanded="true" signature="532:595" placeholder="SELECT name,..user..." />
+            <marker date="1449333884902" expanded="true" signature="648:705" placeholder="SELECT name,..user..." />
+            <marker date="1449333884902" expanded="true" signature="755:833" placeholder="INSERT INTO ..." />
+            <marker date="1449333884902" expanded="true" signature="883:964" placeholder="UPDATE user ..." />
+            <marker date="1449333884902" expanded="true" signature="1571:1573" placeholder="SELECT name,..user..." />
           </folding>
         </state>
       </provider>
@@ -1598,20 +1525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.216518">
-          <caret line="68" column="40" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar!/javax/servlet/RequestDispatcher.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1626,13 +1539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.039443154">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/by/guryanchyck/db/ConnectionFactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48369566">
@@ -1640,10 +1546,189 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/by/guryanchyck/dao/UserDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7517007">
+          <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/successImport.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="187" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/importContacts.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/displayUser.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="8" selection-start-line="8" selection-start-column="0" selection-end-line="26" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/error.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3043478">
+          <caret line="7" column="108" selection-start-line="7" selection-start-column="108" selection-end-line="7" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.4615383">
+          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/by.guryanchyck">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>by.guryanchyck</OriginalElement>
+          <nodes>
+            <node x="" y="">by.guryanchyck.listener</node>
+            <node x="" y="">by.guryanchyck.service</node>
+            <node x="" y="">by.guryanchyck.db</node>
+            <node x="" y="">by.guryanchyck.dao</node>
+            <node x="" y="">by.guryanchyck.servlets</node>
+            <node x="" y="">by.guryanchyck.entity</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="122.5" y="160.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/by.guryanchyck.listener">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>by.guryanchyck.listener</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">by.guryanchyck.listener.UserServiceListener</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-170.5" y="59.0" />
+          <SelectedNodes>
+            <node>by.guryanchyck.listener.UserServiceListener</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Methods</Category>
+            <Category>Constructors</Category>
+            <Category>Properties</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/by.guryanchyck.service">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>by.guryanchyck.service</OriginalElement>
+          <nodes>
+            <node x="" y="">by.guryanchyck.service.UserServiceImpl</node>
+            <node x="" y="">by.guryanchyck.service.ImportService</node>
+            <node x="" y="">by.guryanchyck.service.UserService</node>
+            <node x="" y="">by.guryanchyck.service.Settings</node>
+            <node x="" y="">by.guryanchyck.service.ImportServiceImpl</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="115.0" y="209.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/servlets/UserServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="95" selection-start-line="48" selection-start-column="95" selection-end-line="48" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/service/ImportService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39030612">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/dao/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.529976">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="dbDummy://dbtable:/44f1f731/ea88a427-7e18-490e-b255-f39a7403cda4/users..user">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1652,99 +1737,102 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="89" selection-start-line="15" selection-start-column="89" selection-end-line="15" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/db/ConnectionFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.12755102">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        <state vertical-scroll-proportion="-0.115485564">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/listener/UserServiceListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2729659">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/dao/UserDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7046#7047#0" expanded="true" />
+            <element signature="e#7089#7090#0" expanded="true" />
+            <element signature="e#7272#7273#0" expanded="true" />
+            <element signature="e#7339#7340#0" expanded="true" />
+            <element signature="e#7533#7534#0" expanded="true" />
+            <element signature="e#7606#7607#0" expanded="true" />
+            <element signature="e#7797#7798#0" expanded="true" />
+            <element signature="e#7866#7867#0" expanded="true" />
+            <element signature="e#8058#8059#0" expanded="true" />
+            <element signature="e#8127#8128#0" expanded="true" />
+            <element signature="e#8331#8332#0" expanded="true" />
+            <element signature="e#8412#8413#0" expanded="true" />
+            <marker date="1449333884902" expanded="true" signature="532:595" placeholder="SELECT name,..user..." />
+            <marker date="1449333884902" expanded="true" signature="648:705" placeholder="SELECT name,..user..." />
+            <marker date="1449333884902" expanded="true" signature="755:833" placeholder="INSERT INTO ..." />
+            <marker date="1449333884902" expanded="true" signature="883:964" placeholder="UPDATE user ..." />
+            <marker date="1449333884902" expanded="true" signature="1571:1573" placeholder="SELECT name,..user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.312336">
+          <caret line="66" column="21" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/service/ImportServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/service/Settings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13265306">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/servlets/UserServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16156463">
-          <caret line="60" column="16" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/displayUser.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54448396">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/error.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21174377">
-          <caret line="7" column="108" selection-start-line="7" selection-start-column="108" selection-end-line="7" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/by/guryanchyck/dao/UserDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7517007">
-          <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/successImport.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/service/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21174377">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45373666">
-          <caret line="15" column="76" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="76" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/servlets/ImportServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7769029">
+          <caret line="50" column="58" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/importContacts.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="149" column="8" selection-start-line="149" selection-start-column="8" selection-end-line="149" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/guryanchyck/dao/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6005435">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-          <folding>
-            <marker date="1441017933408" expanded="true" signature="485:548" placeholder="SELECT name,..user..." />
-            <marker date="1441017933408" expanded="true" signature="601:658" placeholder="SELECT name,..user..." />
-            <marker date="1441017933408" expanded="true" signature="708:786" placeholder="INSERT INTO ..." />
-            <marker date="1441017933408" expanded="true" signature="836:917" placeholder="UPDATE user ..." />
-            <marker date="1441017933408" expanded="true" signature="1550:1552" placeholder="SELECT name,..user..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1754,7 +1842,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>CSVWorker:war</last-edited>
+          <last-edited>CSVWorker:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1767,7 +1855,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web</last-edited>
+          <last-edited>Web (CSVWorker)|Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1803,12 +1891,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>CSVWorker</last-edited>
+          <last-edited>Web|CSVWorker</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.26800847" />
-                <option value="0.6" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
