@@ -36,6 +36,7 @@ public class ImportServlet extends HttpServlet {
 
         ImportService importService = (ImportService)getServletContext().getAttribute("importService");
 
+
         importService.importData(request, response);
 
         response.sendRedirect("views/successImport.jsp");

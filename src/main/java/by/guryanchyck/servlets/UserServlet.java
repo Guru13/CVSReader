@@ -23,8 +23,8 @@ import java.util.List;
 public class UserServlet extends HttpServlet {
 
     private String sortedMethod ;
-    private UserDAO dao;
-    private UserService userService;
+//    private UserDAO dao;
+//    private UserService userService;
 
     /**
      * Carries out http-servlet's request in the case of {@code post} request.
@@ -48,7 +48,8 @@ public class UserServlet extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        userService = new UserServiceImpl();
+//        userService = new UserServiceImpl();
+        UserService userService = (UserService)getServletContext().getAttribute("userService");
         sortedMethod = userService.getSortedMethod(request);
 
 
@@ -57,12 +58,13 @@ public class UserServlet extends HttpServlet {
         if (request.getParameter("page") != null) {
             page = Integer.parseInt(request.getParameter("page"));
         }
-        dao = new UserDAOImpl();
+//        dao = new UserDAOImpl();
+        UserDAO userDAO = (UserDAO)getServletContext().getAttribute("userDAO");
 
 
-            List<User> listUsers = dao.values((page - 1) * recordsPerPage, recordsPerPage, sortedMethod);
+            List<User> listUsers = userDAO.values((page - 1) * recordsPerPage, recordsPerPage, sortedMethod);
 
-            long noOfRecords = dao.getNoOfRecords();
+            long noOfRecords = userDAO.getNoOfRecords();
 
             int noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
 
@@ -81,7 +83,7 @@ public class UserServlet extends HttpServlet {
     @Override
     public void destroy() {
         super.destroy();
-        dao.close();
+//        userDAO.close();
     }
 }
 
