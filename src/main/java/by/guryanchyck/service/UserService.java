@@ -1,8 +1,10 @@
 package by.guryanchyck.service;
 
+import by.guryanchyck.dao.UserDAO;
 import by.guryanchyck.entity.User;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * Created by Alexei Guryanchyck
@@ -11,9 +13,7 @@ public interface UserService {
 
     void addUser(User user);
 
-    String getSortedMethod(HttpServletRequest request);
+    String getSortedMethod(String sortedMethod);
 
-    void setPage(HttpServletRequest request);
-
-    void go(HttpServletRequest request);
+    List<User> values(int offset, int noOfRecords, String compareMethod, UserDAO userDAO);
 }

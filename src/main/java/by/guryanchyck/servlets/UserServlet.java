@@ -15,16 +15,12 @@ import java.util.List;
 
 /**
  * Created by Alexey Guryanchyck on 30.08.2015.
- *
+ * <p/>
  * The {@code UserServlet} class represents  servlet used as
  * controller for view data from database.
  */
 @WebServlet(name = "UserServlet", urlPatterns = "/user")
 public class UserServlet extends HttpServlet {
-
-    private String sortedMethod ;
-//    private UserDAO dao;
-//    private UserService userService;
 
     /**
      * Carries out http-servlet's request in the case of {@code post} request.
@@ -38,6 +34,7 @@ public class UserServlet extends HttpServlet {
 
         doGet(request, response);
     }
+
     /**
      * Carries out http-servlet's request in the case of {@code get} request.
      *
@@ -48,9 +45,9 @@ public class UserServlet extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-//        userService = new UserServiceImpl();
-        UserService userService = (UserService)getServletContext().getAttribute("userService");
-        sortedMethod = userService.getSortedMethod(request);
+        UserService userService = (UserService) getServletContext().getAttribute("userService");
+        String sortedMethod = userService.getSortedMethod(request.getParameter("sortedMethod"));
+
 
 
         int page = 1;
@@ -58,24 +55,24 @@ public class UserServlet extends HttpServlet {
         if (request.getParameter("page") != null) {
             page = Integer.parseInt(request.getParameter("page"));
         }
-//        dao = new UserDAOImpl();
-        UserDAO userDAO = (UserDAO)getServletContext().getAttribute("userDAO");
 
+        UserDAO userDAO = (UserDAO) getServletContext().getAttribute("userDAO");
 
-            List<User> listUsers = userDAO.values((page - 1) * recordsPerPage, recordsPerPage, sortedMethod);
+//        List<User> listUsers = userDAO.values((page - 1) * recordsPerPage, recordsPerPage, sortedMethod);
+        List<User> listUsers = userService.values((page - 1) * recordsPerPage, recordsPerPage, sortedMethod, userDAO);
+        long noOfRecords = userDAO.getNoOfRecords();
 
-            long noOfRecords = userDAO.getNoOfRecords();
+        int noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
 
-            int noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
+        request.setAttribute("userList", listUsers);
+        request.setAttribute("noOfPages", noOfPages);
+        request.setAttribute("currentPage", page);
+        request.setAttribute("sortedMethod", sortedMethod);
 
-            request.setAttribute("userList", listUsers);
-            request.setAttribute("noOfPages", noOfPages);
-            request.setAttribute("currentPage", page);
-            request.setAttribute("sortedMethod", sortedMethod);
-//            userService.go(request);
         RequestDispatcher view = request.getRequestDispatcher("views/displayUser.jsp");
         view.forward(request, response);
     }
+
     /**
      * It is performed when the servlet stops its existence.
      * It used to carry out finalizing actions.

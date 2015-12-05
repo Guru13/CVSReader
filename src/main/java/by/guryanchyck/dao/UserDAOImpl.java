@@ -8,15 +8,13 @@ import java.util.*;
 
 /**
  * Created by Alexey Guryanchyck on 30.08.2015.
- *
+ * <p/>
  * The class implements all the necessary methods
  * for manipulation with user's data in database.
  */
 public class UserDAOImpl implements UserDAO {
 
-    private Connection connection;
-    private Statement stmt;
-    private long noOfRecords;
+
     private static final String SQL_GET_USERS_WITH_LIMIT = "SELECT name, surname, login, email, phoneNumber FROM user limit ";
     private static final String SQL_GET_USERS = "SELECT name, surname, login, email, phoneNumber FROM user;";
     private static final String SQL_INSERT = "INSERT INTO user (name, surname, login, email, phoneNumber) VALUES (?,?,?,?,?);";
@@ -26,8 +24,7 @@ public class UserDAOImpl implements UserDAO {
     }
 
     private static Connection getConnection() throws SQLException, ClassNotFoundException {
-        Connection con = ConnectionFactory.getInstance().getConnection();
-        return con;
+        return ConnectionFactory.getInstance().getConnection();
     }
 
     /**
@@ -43,10 +40,9 @@ public class UserDAOImpl implements UserDAO {
         String query = SQL_GET_USERS_WITH_LIMIT + offset + ", " + noOfRecords;
         List<User> listUsers = new ArrayList<User>();
         User user = null;
-        try {
-            connection = getConnection();
-            stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery(query);
+        try (Connection connection = getConnection(); Statement stmt = connection.createStatement();
+             ResultSet rs = stmt.executeQuery(query)) {
+
             while (rs.next()) {
                 user = new User();
                 user.setName(rs.getString("name"));
@@ -56,22 +52,13 @@ public class UserDAOImpl implements UserDAO {
                 user.setPhoneNumber(rs.getString("phoneNumber"));
                 listUsers.add(user);
             }
-            rs.close();
 
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (stmt != null)
-                    stmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
 
         sortBy(compareMethod, listUsers);
+
         return listUsers;
     }
 
@@ -109,10 +96,9 @@ public class UserDAOImpl implements UserDAO {
         String query = SQL_GET_USERS;
         List<User> listUsers = new ArrayList<User>();
         User user = null;
-        try {
-            connection = getConnection();
-            stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery(query);
+
+        try(Connection connection = getConnection(); Statement stmt = connection.createStatement();
+        ResultSet rs = stmt.executeQuery(query)){
             while (rs.next()) {
                 user = new User();
                 user.setName(rs.getString("name"));
@@ -122,18 +108,8 @@ public class UserDAOImpl implements UserDAO {
                 user.setPhoneNumber(rs.getString("phoneNumber"));
                 listUsers.add(user);
             }
-            rs.close();
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (stmt != null)
-                    stmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
 
         return listUsers;
@@ -160,28 +136,17 @@ public class UserDAOImpl implements UserDAO {
      *             has to be placed into table.
      */
     private void userInsert(User user) {
-        PreparedStatement statement;
-        try {
-            connection = getConnection();
-            statement = this.connection.prepareStatement(SQL_INSERT);
+
+        try(Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(SQL_INSERT);){
+
             statement.setString(1, user.getName());
             statement.setString(2, user.getSurName());
             statement.setString(3, user.getLogin());
             statement.setString(4, user.getEmail());
             statement.setString(5, user.getPhoneNumber());
             statement.executeUpdate();
-
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (stmt != null)
-                    stmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
     }
 
@@ -192,28 +157,16 @@ public class UserDAOImpl implements UserDAO {
      *             has to be update into table.
      */
     private void userUpdate(User user) {
-        PreparedStatement statement;
-        try {
-            connection = getConnection();
-            statement = connection.prepareStatement(SQL_UPDATE);
+
+        try(Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(SQL_UPDATE);){
             statement.setString(1, user.getName());
             statement.setString(2, user.getSurName());
             statement.setString(3, user.getEmail());
             statement.setString(4, user.getPhoneNumber());
             statement.setString(5, user.getLogin());
             statement.executeUpdate();
-
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (stmt != null)
-                    stmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
     }
 
@@ -244,17 +197,6 @@ public class UserDAOImpl implements UserDAO {
 
         return users.contains(user);
 
-    }
-
-    /**
-     * Closes connection with database
-     */
-    public void close() {
-        try {
-            connection.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
     }
 
     /**

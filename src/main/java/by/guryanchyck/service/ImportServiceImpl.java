@@ -18,6 +18,7 @@ public class ImportServiceImpl implements ImportService {
     private final int columnCount = 5;
 
 
+
     public String readData(BufferedInputStream bis) throws IOException {
         StringBuffer data = new StringBuffer();
         int bit;
@@ -45,8 +46,8 @@ public class ImportServiceImpl implements ImportService {
             String phoneNumber = columns[4];
             User user = new User(name, surname, login, email, phoneNumber);
             userService.addUser(user);
-
         }
-
     }
+
+
 }

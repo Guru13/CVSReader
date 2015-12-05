@@ -28,6 +28,7 @@ public class UserServiceListener implements ServletContextListener {
         ServletContext servletContext = servletContextEvent.getServletContext();
         userService = new UserServiceImpl();
         importService = new ImportServiceImpl();
+
         userDAO = new UserDAOImpl();
         servletContext.setAttribute("userService", userService);
         servletContext.setAttribute("importService", importService);
