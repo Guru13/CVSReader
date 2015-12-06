@@ -13,8 +13,6 @@ public interface UserService {
 
     void addUser(User user);
 
-    String getSortedMethod(String sortedMethod);
-
     List<User> values(int offset, int noOfRecords, String compareMethod);
 
     void addAllUsers(List<User> users);
@@ -22,8 +20,6 @@ public interface UserService {
     long getNoOfRecords();
 
     void setUserDAO(UserDAO userDAO);
-
-    int getRecordsPerPage(String recordsPerPage);
 
     int getRecordsPerPage();
 

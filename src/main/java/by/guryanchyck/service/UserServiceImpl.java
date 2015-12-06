@@ -13,7 +13,7 @@ public class UserServiceImpl implements UserService{
     private UserDAO userDAO;
     private int recordsPerPage = 10;
     private String sortedMethod = "name";
-    private long numberOfRecords;
+
 
     public int getRecordsPerPage() {
         return recordsPerPage;
@@ -31,32 +31,9 @@ public class UserServiceImpl implements UserService{
         this.sortedMethod = sortedMethod;
     }
 
-    public long getNumberOfRecords() {
-        return numberOfRecords;
-    }
-
-    public void setNumberOfRecords(long numberOfRecords) {
-        this.numberOfRecords = numberOfRecords;
-    }
-
     public void addUser(User user) {
         userDAO.add(user);
     }
-
-    public String getSortedMethod(String sortedMethod){
-        if (sortedMethod == null){
-            sortedMethod = "name";
-        }
-        return sortedMethod;
-    }
-
-    public int getRecordsPerPage(String recordsPerPage){
-        if (recordsPerPage == null){
-            recordsPerPage = "10";
-        }
-        return Integer.parseInt(recordsPerPage);
-    }
-
 
     public List<User> values(int offset, int noOfRecords, String compareMethod) {
         return userDAO.values(offset, noOfRecords, compareMethod);
