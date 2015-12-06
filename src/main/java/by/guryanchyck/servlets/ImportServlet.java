@@ -45,13 +45,13 @@ public class ImportServlet extends HttpServlet {
             RequestDispatcher dispatcher = request.getRequestDispatcher("views/importContacts.jsp");
             dispatcher.forward(request, response);
         }
-//        importService.addUserToDB(dataArray);
+
         try {
-            importService.addUserToQueue(dataArray);
+            importService.addTextToQueue(dataArray);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        importService.addUserToBase();
+
 
 
 

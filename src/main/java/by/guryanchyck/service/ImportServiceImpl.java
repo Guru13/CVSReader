@@ -2,14 +2,6 @@ package by.guryanchyck.service;
 
 import by.guryanchyck.entity.User;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
-import javax.servlet.ServletInputStream;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
@@ -18,30 +10,19 @@ import java.util.concurrent.BlockingQueue;
  */
 public class ImportServiceImpl implements ImportService {
 
-    private final int columnCount = 5;
-    private BlockingQueue<User> usersQueue = new ArrayBlockingQueue<User>(1024);
+    private BlockingQueue<String[]> usersQueueString = new ArrayBlockingQueue<>(1024);
 
     private UserService userService;
+    private Importer importer;
 
-    public void addUserToQueue(String[] dataArray) throws InterruptedException {
-        for (int i = 4; i < dataArray.length - 1; i++) {
-            String[] columns = dataArray[i].split(";");
-
-            if (columns.length != columnCount) {
-                continue;
-            }
-            String name = columns[0];
-            String surname = columns[1];
-            String login = columns[2];
-            String email = columns[3];
-            String phoneNumber = columns[4];
-            User user = new User(name, surname, login, email, phoneNumber);
-            usersQueue.put(user);
-        }
+    public ImportServiceImpl() {
+        importer = new Importer(usersQueueString);
     }
 
-    public void addUserToBase() {
-        Importer importer = new Importer(usersQueue);
+
+    public void addTextToQueue(String[] dataArray) throws InterruptedException {
+
+        usersQueueString.put(dataArray);
         new Thread(importer).start();
     }
 
@@ -52,18 +33,20 @@ public class ImportServiceImpl implements ImportService {
 
     class Importer implements Runnable {
 
-        protected BlockingQueue<User> blockingQueue;
 
-        public Importer(BlockingQueue<User> queue) {
-            this.blockingQueue = queue;
+        private BlockingQueue<String[]> blockingQueueString;
+
+
+        public Importer(BlockingQueue<String[]> queue) {
+            this.blockingQueueString = queue;
         }
 
         @Override
         public void run() {
             while (true) {
                 try {
-                    User user = blockingQueue.take();
-                    userService.addUser(user);
+                    String[] dataArray = blockingQueueString.take();
+                    userService.addUser(dataArray);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

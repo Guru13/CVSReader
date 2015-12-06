@@ -3,13 +3,15 @@ package by.guryanchyck.service;
 import by.guryanchyck.dao.UserDAO;
 import by.guryanchyck.dao.UserDAOImpl;
 import by.guryanchyck.entity.User;
+
 import java.util.List;
 
 /**
  * Created by Alexei Guryanchyck
  */
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
+    private final int columnCount = 5;
     private UserDAO userDAO;
     private int recordsPerPage = 10;
     private String sortedMethod = "name";
@@ -33,6 +35,23 @@ public class UserServiceImpl implements UserService{
 
     public void addUser(User user) {
         userDAO.add(user);
+    }
+
+    public void addUser(String[] dataArray) {
+        for (int i = 4; i < dataArray.length - 1; i++) {
+            String[] columns = dataArray[i].split(";");
+
+            if (columns.length != columnCount) {
+                continue;
+            }
+            String name = columns[0];
+            String surname = columns[1];
+            String login = columns[2];
+            String email = columns[3];
+            String phoneNumber = columns[4];
+            User user = new User(name, surname, login, email, phoneNumber);
+            userDAO.add(user);
+        }
     }
 
     public List<User> values(int offset, int noOfRecords, String compareMethod) {

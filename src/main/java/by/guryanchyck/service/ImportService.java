@@ -15,9 +15,7 @@ public interface ImportService {
 
      void setUserService(UserService userService);
 
-     void addUserToQueue(String[] dataArray) throws InterruptedException;
-
-     void addUserToBase();
+     void addTextToQueue(String[] dataArray) throws InterruptedException;
 
 
 }
