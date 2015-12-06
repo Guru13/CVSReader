@@ -45,8 +45,15 @@ public class UserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         UserService userService = (UserService) getServletContext().getAttribute("userService");
-        String sortedMethod = userService.getSortedMethod(request.getParameter("sortedMethod"));
-        int recordsPerPage = userService.getRecordsPerPage(request.getParameter("recordsPerPage"));
+
+
+        if (request.getParameter("recordsPerPage") != null) {
+            userService.setRecordsPerPage(Integer.parseInt(request.getParameter("recordsPerPage")));
+        }
+        if (request.getParameter("sortedMethod") != null){
+            userService.setSortedMethod(request.getParameter("sortedMethod"));
+        }
+
         long numberOfRecords = userService.getNoOfRecords();
 
 
@@ -55,7 +62,8 @@ public class UserServlet extends HttpServlet {
             page = Integer.parseInt(request.getParameter("page"));
         }
 
-
+        int recordsPerPage = userService.getRecordsPerPage();
+        String sortedMethod = userService.getSortedMethod();
         List<User> listUsers = userService.values((page - 1) * recordsPerPage, recordsPerPage, sortedMethod);
 
         long noOfRecords = userService.getNoOfRecords();
@@ -67,20 +75,11 @@ public class UserServlet extends HttpServlet {
         request.setAttribute("noOfPages", noOfPages);
         request.setAttribute("currentPage", page);
         request.setAttribute("sortedMethod", sortedMethod);
+        request.setAttribute("recordsPerPage", recordsPerPage);
 
 
         RequestDispatcher view = request.getRequestDispatcher("views/displayUser.jsp");
         view.forward(request, response);
-    }
-
-    /**
-     * It is performed when the servlet stops its existence.
-     * It used to carry out finalizing actions.
-     */
-    @Override
-    public void destroy() {
-        super.destroy();
-//        userDAO.close();
     }
 }
 

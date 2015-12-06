@@ -56,7 +56,7 @@
         </c:if>
 
 
-        <form action="${pageContext.servletContext.contextPath}/user?page=${currentPage}" method='post'>
+        <form action="${pageContext.servletContext.contextPath}/user?page=1" method='post'>
             <select name="recordsPerPage">
                 <option value="10">10</option>
                 <option value="20">20</option>
@@ -66,7 +66,7 @@
             </select>
             <input type='submit' value='submit'>
         </form>
-        <h3>Pages:</h3>
+        <h3>Records on page:${recordsPerPage}</h3>
 
         <div class="sorting">
             <h3>Sort </h3>

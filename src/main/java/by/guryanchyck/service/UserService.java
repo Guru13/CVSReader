@@ -24,4 +24,12 @@ public interface UserService {
     void setUserDAO(UserDAO userDAO);
 
     int getRecordsPerPage(String recordsPerPage);
+
+    int getRecordsPerPage();
+
+    void setRecordsPerPage(int recordsPerPage);
+
+    String getSortedMethod();
+
+    void setSortedMethod(String sortedMethod);
 }

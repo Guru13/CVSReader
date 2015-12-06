@@ -68,6 +68,7 @@ public class ImportServiceImpl implements ImportService {
     }
 
     class Importer implements Runnable {
+
         protected BlockingQueue<User> blockingQueue;
 
         public Importer(BlockingQueue<User> queue) {
