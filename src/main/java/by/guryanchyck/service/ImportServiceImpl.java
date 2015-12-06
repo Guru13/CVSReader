@@ -39,6 +39,7 @@ public class ImportServiceImpl implements ImportService {
 
         public Importer(BlockingQueue<String[]> queue) {
             this.blockingQueueString = queue;
+
         }
 
         @Override
