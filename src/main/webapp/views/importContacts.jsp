@@ -7,7 +7,8 @@
 <body>
 
 <form action="${pageContext.servletContext.contextPath}/import" method="post" enctype="multipart/form-data">
-    <input type="file" name="file" value="file1" accept=".csv"/>
+   Select file to import: <input type="file" name="fileName"  accept=".csv"/>
+    <br/>
     <input type="submit" value="import"/>
 </form>
 <c:if test="${message.equals('empty')}">

@@ -21,7 +21,6 @@ import java.util.List;
  */
 @WebServlet(name = "UserServlet", urlPatterns = "/user")
 public class UserServlet extends HttpServlet {
-
     /**
      * Carries out http-servlet's request in the case of {@code post} request.
      *
@@ -47,16 +46,15 @@ public class UserServlet extends HttpServlet {
 
         UserService userService = (UserService) getServletContext().getAttribute("userService");
         String sortedMethod = userService.getSortedMethod(request.getParameter("sortedMethod"));
-
+        int recordsPerPage = userService.getRecordsPerPage(request.getParameter("recordsPerPage"));
+        long numberOfRecords = userService.getNoOfRecords();
 
 
         int page = 1;
-        int recordsPerPage = 10;
         if (request.getParameter("page") != null) {
             page = Integer.parseInt(request.getParameter("page"));
         }
 
-//        UserDAO userDAO = (UserDAO) getServletContext().getAttribute("userDAO");
 
         List<User> listUsers = userService.values((page - 1) * recordsPerPage, recordsPerPage, sortedMethod);
 
@@ -64,10 +62,12 @@ public class UserServlet extends HttpServlet {
 
         int noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
 
+        request.setAttribute("numberOfRecords", numberOfRecords);
         request.setAttribute("userList", listUsers);
         request.setAttribute("noOfPages", noOfPages);
         request.setAttribute("currentPage", page);
         request.setAttribute("sortedMethod", sortedMethod);
+
 
         RequestDispatcher view = request.getRequestDispatcher("views/displayUser.jsp");
         view.forward(request, response);

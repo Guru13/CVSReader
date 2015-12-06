@@ -22,4 +22,6 @@ public interface UserService {
     long getNoOfRecords();
 
     void setUserDAO(UserDAO userDAO);
+
+    int getRecordsPerPage(String recordsPerPage);
 }

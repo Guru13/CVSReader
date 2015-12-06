@@ -18,7 +18,6 @@ public class UserDAOImpl implements UserDAO {
 
     private final static Logger logger = Logger.getLogger(UserDAOImpl.class);
 
-    //    private static final String SQL_GET_USERS_WITH_LIMIT = "SELECT name, surname, login, email, phoneNumber FROM user limit ";
     private static final String SQL_GET_USERS_WITH_LIMIT = "SELECT name, surname, login, email, phoneNumber FROM user LIMIT ?, ? ";
     private static final String SQL_GET_USERS = "SELECT name, surname, login, email, phoneNumber FROM user;";
     private static final String SQL_INSERT = "INSERT INTO user (name, surname, login, email, phoneNumber) VALUES (?,?,?,?,?);";
@@ -43,9 +42,8 @@ public class UserDAOImpl implements UserDAO {
     public List<User> values(int offset, int noOfRecords, String compareMethod) {
 
         List<User> listUsers = new ArrayList<User>();
-        User user = null;
+        User user;
         try (Connection connection = getConnection();
-
              PreparedStatement statement = connection.prepareStatement(SQL_GET_USERS_WITH_LIMIT);) {
 
             statement.setInt(1, offset);
@@ -63,7 +61,7 @@ public class UserDAOImpl implements UserDAO {
 
                     listUsers.add(user);
                 }
-            }catch (SQLException e){
+            } catch (SQLException e) {
                 logger.error("Could not execute result set", e);
             }
         } catch (ClassNotFoundException | SQLException e) {
@@ -109,10 +107,11 @@ public class UserDAOImpl implements UserDAO {
 
         String query = SQL_GET_USERS;
         List<User> listUsers = new ArrayList<User>();
-        User user = null;
+        User user;
 
         try (Connection connection = getConnection(); Statement statement = connection.createStatement();
              ResultSet rs = statement.executeQuery(query)) {
+
             while (rs.next()) {
                 user = new User();
                 user.setName(rs.getString("name"));

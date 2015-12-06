@@ -39,15 +39,21 @@ public class ImportServlet extends HttpServlet {
         ServletInputStream in = request.getInputStream();
         BufferedInputStream bis = new BufferedInputStream(in);
 
-//        String data = importService.readData(bis);
-//        String[] dataArray = importService.dataToArray(data);
         String[] dataArray = readDataToArray(bis);
         if (dataArray.length <= 6) {
             request.setAttribute("message", "empty");
             RequestDispatcher dispatcher = request.getRequestDispatcher("views/importContacts.jsp");
             dispatcher.forward(request, response);
         }
-        importService.addUserToDB(dataArray);
+//        importService.addUserToDB(dataArray);
+        try {
+            importService.addUserToQueue(dataArray);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        importService.addUserToBase();
+
+
 
         response.sendRedirect("views/successImport.jsp");
     }

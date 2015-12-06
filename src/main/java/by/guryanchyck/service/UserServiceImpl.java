@@ -11,6 +11,8 @@ import java.util.List;
 public class UserServiceImpl implements UserService{
 
     private UserDAO userDAO;
+    int recordsPerPage = 10;
+
 
 
     public void addUser(User user) {
@@ -22,6 +24,13 @@ public class UserServiceImpl implements UserService{
             sortedMethod = "name";
         }
         return sortedMethod;
+    }
+
+    public int getRecordsPerPage(String recordsPerPage){
+        if (recordsPerPage == null){
+            recordsPerPage = "10";
+        }
+        return Integer.parseInt(recordsPerPage);
     }
 
 
