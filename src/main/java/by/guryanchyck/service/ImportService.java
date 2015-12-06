@@ -13,8 +13,6 @@ import java.io.IOException;
  */
 public interface ImportService {
 
-     void addUserToDB(String[] dataArray);
-
      void setUserService(UserService userService);
 
      void addUserToQueue(String[] dataArray) throws InterruptedException;

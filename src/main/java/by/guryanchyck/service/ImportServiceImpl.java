@@ -23,23 +23,6 @@ public class ImportServiceImpl implements ImportService {
 
     private UserService userService;
 
-    public void addUserToDB(String[] dataArray) {
-        for (int i = 4; i < dataArray.length - 1; i++) {
-            String[] columns = dataArray[i].split(";");
-
-            if (columns.length != columnCount) {
-                continue;
-            }
-            String name = columns[0];
-            String surname = columns[1];
-            String login = columns[2];
-            String email = columns[3];
-            String phoneNumber = columns[4];
-            User user = new User(name, surname, login, email, phoneNumber);
-            userService.addUser(user);
-        }
-    }
-
     public void addUserToQueue(String[] dataArray) throws InterruptedException {
         for (int i = 4; i < dataArray.length - 1; i++) {
             String[] columns = dataArray[i].split(";");
