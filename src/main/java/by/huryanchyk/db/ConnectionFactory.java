@@ -1,6 +1,6 @@
-package by.guryanchyck.db;
+package by.huryanchyk.db;
 
-import by.guryanchyck.service.Settings;
+import by.huryanchyk.service.Settings;
 import org.apache.log4j.Logger;
 
 import java.sql.Connection;
@@ -8,7 +8,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- * Created by Alexey Guryanchyck on 30.08.2015.
+ * Created by Alexei Huryanchyk on 05.12.2015.
  *
  * The  class represents an ability to connect with database.
  */
@@ -18,7 +18,6 @@ public class ConnectionFactory {
 
     private static ConnectionFactory instance = new ConnectionFactory();
     private final Settings settings;
-
 
     private ConnectionFactory() {
         settings = Settings.getInstance();

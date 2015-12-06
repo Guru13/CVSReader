@@ -1,15 +1,15 @@
-package by.guryanchyck.service;
+package by.huryanchyk.service;
 
 import org.apache.log4j.Logger;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
 /**
- * Created by Alexey Guryanchyck on 30.08.2015.
+ * Created by Alexei Huryanchyk on 05.12.2015..
  *
+ * Class for getting properties for connection with database
  */
 public class Settings {
     private final static Logger logger = Logger.getLogger(Settings.class);

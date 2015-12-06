@@ -1,4 +1,4 @@
-package by.guryanchyck.db;
+package by.huryanchyk.db;
 
 import org.junit.Assert;
 import org.junit.BeforeClass;

@@ -1,7 +1,7 @@
-package by.guryanchyck.entity;
+package by.huryanchyk.entity;
 
 /**
- * Created by Alexey Guryanchyck on 30.08.2015.
+ * Created by Alexei Huryanchyk on 05.12.2015.
  * <p/>
  * The {@code User} class is an entity-class which includes all
  * the necessary getters and setters for its fields and also overrides

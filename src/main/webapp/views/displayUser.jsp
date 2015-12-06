@@ -7,7 +7,7 @@
 <body>
 
 <c:choose>
-    <c:when test="${numberOfRecords == 0}">
+    <c:when test="${noOfRecords == 0}">
         <h2>The list of users is empty</h2>
     </c:when>
     <c:otherwise>
@@ -20,7 +20,7 @@
                 <th>Phone number</th>
             </tr>
 
-            <c:forEach var="user" items="${userList}">
+            <c:forEach var="user" items="${currentUsersList}">
                 <tr>
                     <td>${user.name}</td>
                     <td>${user.surName}</td>
@@ -83,11 +83,10 @@
             </form>
             <h3>sorted by: ${sortedMethod}</h3>
         </div>
-        <br/>
-        <a href="${pageContext.servletContext.contextPath}/index.jsp">back to menu</a>
     </c:otherwise>
 </c:choose>
-
+<br/>
+<a href="${pageContext.servletContext.contextPath}/index.jsp">back to menu</a>
 
 </body>
 </html>

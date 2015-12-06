@@ -1,11 +1,7 @@
-package by.guryanchyck.servlets;
+package by.huryanchyk.servlets;
 
-import by.guryanchyck.dao.UserDAO;
-import by.guryanchyck.dao.UserDAOImpl;
-import by.guryanchyck.entity.User;
-import by.guryanchyck.service.UserService;
-import by.guryanchyck.service.UserServiceImpl;
-
+import by.huryanchyk.entity.User;
+import by.huryanchyk.service.UserService;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,13 +10,14 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Created by Alexey Guryanchyck on 30.08.2015.
+ * Created by Alexei Huryanchyk on 05.12.2015.
  * <p/>
  * The {@code UserServlet} class represents  servlet used as
  * controller for view data from database.
  */
 @WebServlet(name = "UserServlet", urlPatterns = "/user")
 public class UserServlet extends HttpServlet {
+
     /**
      * Carries out http-servlet's request in the case of {@code post} request.
      *
@@ -46,16 +43,12 @@ public class UserServlet extends HttpServlet {
 
         UserService userService = (UserService) getServletContext().getAttribute("userService");
 
-
         if (request.getParameter("recordsPerPage") != null) {
             userService.setRecordsPerPage(Integer.parseInt(request.getParameter("recordsPerPage")));
         }
         if (request.getParameter("sortedMethod") != null){
             userService.setSortedMethod(request.getParameter("sortedMethod"));
         }
-
-        long numberOfRecords = userService.getNoOfRecords();
-
 
         int page = 1;
         if (request.getParameter("page") != null) {
@@ -64,19 +57,19 @@ public class UserServlet extends HttpServlet {
 
         int recordsPerPage = userService.getRecordsPerPage();
         String sortedMethod = userService.getSortedMethod();
-        List<User> listUsers = userService.values((page - 1) * recordsPerPage, recordsPerPage, sortedMethod);
+
+        List<User> currentUsersList = userService.currentUsersList((page - 1) * recordsPerPage, recordsPerPage, sortedMethod);
 
         long noOfRecords = userService.getNoOfRecords();
 
         int noOfPages = (int) Math.ceil(noOfRecords * 1.0 / recordsPerPage);
 
-        request.setAttribute("numberOfRecords", numberOfRecords);
-        request.setAttribute("userList", listUsers);
+        request.setAttribute("noOfRecords", noOfRecords);
+        request.setAttribute("currentUsersList", currentUsersList);
         request.setAttribute("noOfPages", noOfPages);
         request.setAttribute("currentPage", page);
         request.setAttribute("sortedMethod", sortedMethod);
         request.setAttribute("recordsPerPage", recordsPerPage);
-
 
         RequestDispatcher view = request.getRequestDispatcher("views/displayUser.jsp");
         view.forward(request, response);
