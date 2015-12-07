@@ -14,10 +14,7 @@ import java.util.List;
  */
 public class UserServiceImpl implements UserService {
 
-    private final int columnCount = 5;
     private UserDAO userDAO;
-    private int recordsPerPage = 10;
-    private String sortedMethod = "name";
 
     @Override
     public List<User> currentUsersList(int offset, int noOfRecords, String compareMethod) {
@@ -31,6 +28,7 @@ public class UserServiceImpl implements UserService {
 
         for (int i = 4; i < dataArray.length - 1; i++) {
             String[] columns = dataArray[i].split(";");
+            int columnCount = 5;
             if (columns.length != columnCount) {
                 continue;
             }
@@ -49,28 +47,9 @@ public class UserServiceImpl implements UserService {
     public long getNoOfRecords() {
         return userDAO.getNoOfRecords();
     }
-    @Override
+
     public void setUserDAO(UserDAO userDAO) {
         this.userDAO = userDAO;
     }
 
-    @Override
-    public int getRecordsPerPage() {
-        return recordsPerPage;
-    }
-
-    @Override
-    public void setRecordsPerPage(int recordsPerPage) {
-        this.recordsPerPage = recordsPerPage;
-    }
-
-    @Override
-    public String getSortedMethod() {
-        return sortedMethod;
-    }
-
-    @Override
-    public void setSortedMethod(String sortedMethod) {
-        this.sortedMethod = sortedMethod;
-    }
 }

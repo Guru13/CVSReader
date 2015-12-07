@@ -56,7 +56,7 @@
         </c:if>
 
 
-        <form action="${pageContext.servletContext.contextPath}/user?page=1" method='post'>
+        <form action="${pageContext.servletContext.contextPath}/user" method='post'>
             <select name="recordsPerPage">
                 <option value="10">10</option>
                 <option value="20">20</option>
@@ -70,14 +70,13 @@
 
         <div class="sorting">
             <h3>Sort </h3>
-
-            <form action="${pageContext.servletContext.contextPath}/user?page=${currentPage}" method='post'>
+            <form action="${pageContext.servletContext.contextPath}/user" method='get'>
                 <select name="sortedMethod">
-                    <option value="name">by name</option>
-                    <option value="surname">by surname</option>
-                    <option value="login">by login</option>
-                    <option value="email">by email</option>
-                    <option value="phoneNumber">by phone number</option>
+                    <option value="name">name</option>
+                    <option value="surname">surname</option>
+                    <option value="login">login</option>
+                    <option value="email">email</option>
+                    <option value="phoneNumber">phone number</option>
                 </select>
                 <input type='submit' value='sort'>
             </form>

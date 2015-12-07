@@ -1,6 +1,5 @@
 package by.huryanchyk.service;
 
-import by.huryanchyk.dao.UserDAO;
 import by.huryanchyk.entity.User;
 import java.util.List;
 
@@ -37,13 +36,5 @@ public interface UserService {
      */
     long getNoOfRecords();
 
-    void setUserDAO(UserDAO userDAO);
 
-    int getRecordsPerPage();
-
-    void setRecordsPerPage(int recordsPerPage);
-
-    String getSortedMethod();
-
-    void setSortedMethod(String sortedMethod);
 }

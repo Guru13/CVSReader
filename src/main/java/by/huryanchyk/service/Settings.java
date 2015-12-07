@@ -12,32 +12,18 @@ import java.util.Properties;
  * Class for getting properties for connection with database
  */
 public class Settings {
+
     private final static Logger logger = Logger.getLogger(Settings.class);
 
-    private static final Settings INSTANCE = new Settings();
-    private final Properties properties = new Properties();
+    private static final Properties properties = new Properties();
 
-    private Settings(){
+    public static String value(String key){
         try {
-            properties.load(new FileInputStream(this.getClass().getClassLoader().getResource("jdbc.properties").getFile()));
+            properties.load(new FileInputStream(Settings.class.getClassLoader().getResource("jdbc.properties").getFile()));
+
         } catch (IOException e) {
             logger.error("Could not load file", e);
-            e.printStackTrace();
         }
-    }
-
-    /**
-     * Represents singleton pattern that gets the
-     * only instance of {@code Settings}.
-     *
-     * @return single instance of {@code Settings}.
-     */
-    public static Settings getInstance(){
-        return INSTANCE;
-    }
-
-
-    public String value(String key){
-        return this.properties.getProperty(key);
+        return properties.getProperty(key);
     }
 }

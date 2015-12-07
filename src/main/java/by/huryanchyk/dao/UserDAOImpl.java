@@ -2,6 +2,7 @@ package by.huryanchyk.dao;
 
 import by.huryanchyk.db.ConnectionFactory;
 import by.huryanchyk.entity.User;
+import by.huryanchyk.exceptions.DaoException;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
@@ -27,16 +28,12 @@ public class UserDAOImpl implements UserDAO {
 
     }
 
-    private static Connection getConnection() throws SQLException, ClassNotFoundException {
-        return ConnectionFactory.getInstance().getConnection();
-    }
-
     @Override
     public List<User> currentUsersList(int offset, int noOfRecords, String compareMethod) {
 
         List<User> listUsers = new ArrayList<User>();
         User user;
-        try (Connection connection = getConnection();
+        try (Connection connection = ConnectionFactory.getConnection();
              PreparedStatement statement = connection.prepareStatement(SQL_GET_USERS_WITH_LIMIT);) {
 
             statement.setInt(1, offset);
@@ -56,10 +53,11 @@ public class UserDAOImpl implements UserDAO {
                 }
             } catch (SQLException e) {
                 logger.error("Could not execute result set", e);
+                throw new DaoException("Could not exexucute result set", e);
             }
         } catch (ClassNotFoundException | SQLException e) {
             logger.error("Could not connection to db", e);
-            e.printStackTrace();
+            throw new DaoException("Could not connection to db", e);
         }
 
         sortBy(compareMethod, listUsers);
@@ -74,7 +72,7 @@ public class UserDAOImpl implements UserDAO {
         List<User> listUsers = new ArrayList<User>();
         User user;
 
-        try (Connection connection = getConnection(); Statement statement = connection.createStatement();
+        try (Connection connection = ConnectionFactory.getConnection(); Statement statement = connection.createStatement();
              ResultSet rs = statement.executeQuery(query)) {
 
             while (rs.next()) {
@@ -86,9 +84,12 @@ public class UserDAOImpl implements UserDAO {
                 user.setPhoneNumber(rs.getString("phoneNumber"));
                 listUsers.add(user);
             }
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (ClassNotFoundException e) {
             logger.error("Could not connection to db", e);
-            e.printStackTrace();
+            throw new DaoException("Could not connection to db", e);
+        } catch (SQLException e) {
+            logger.error("Could not execute result set", e);
+            throw new DaoException("Could not exexucute result set", e);
         }
 
         return listUsers;
@@ -96,7 +97,7 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public void addAllUsers(List<User> users) {
-        try (Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(SQL_INSERT);) {
+        try (Connection connection = ConnectionFactory.getConnection(); PreparedStatement statement = connection.prepareStatement(SQL_INSERT);) {
             for (User user : users) {
                 if (userExistLogin(user)) {
                     userUpdate(user);
@@ -110,9 +111,12 @@ public class UserDAOImpl implements UserDAO {
                 }
             }
             statement.executeBatch();
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (ClassNotFoundException e) {
             logger.error("Could not connection to db", e);
-            e.printStackTrace();
+            throw new DaoException("Could not connection to db", e);
+        } catch (SQLException e) {
+            logger.error("Could not execute result set", e);
+            throw new DaoException("Could not exexucute result set", e);
         }
     }
 
@@ -143,6 +147,30 @@ public class UserDAOImpl implements UserDAO {
     }
 
     /**
+     * Updates data in database
+     *
+     * @param user an instance of {@code User} class that
+     *             has to be update into table.
+     */
+    private void userUpdate(User user) {
+
+        try (Connection connection = ConnectionFactory.getConnection(); PreparedStatement statement = connection.prepareStatement(SQL_UPDATE);) {
+            statement.setString(1, user.getName());
+            statement.setString(2, user.getSurName());
+            statement.setString(3, user.getEmail());
+            statement.setString(4, user.getPhoneNumber());
+            statement.setString(5, user.getLogin());
+            statement.executeUpdate();
+        } catch (ClassNotFoundException e) {
+            logger.error("Could not connection to db", e);
+            throw new DaoException("Could not connection to db", e);
+        } catch (SQLException e) {
+            logger.error("Could not execute result set", e);
+            throw new DaoException("Could not exexucute result set", e);
+        }
+    }
+
+    /**
      * Sorts data
      *
      * @param compareMethod method for sorting
@@ -164,27 +192,6 @@ public class UserDAOImpl implements UserDAO {
         }
 
         Collections.sort(listUsers, comparator);
-    }
-
-    /**
-     * Updates data in database
-     *
-     * @param user an instance of {@code User} class that
-     *             has to be update into table.
-     */
-    private void userUpdate(User user) {
-
-        try (Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(SQL_UPDATE);) {
-            statement.setString(1, user.getName());
-            statement.setString(2, user.getSurName());
-            statement.setString(3, user.getEmail());
-            statement.setString(4, user.getPhoneNumber());
-            statement.setString(5, user.getLogin());
-            statement.executeUpdate();
-        } catch (ClassNotFoundException | SQLException e) {
-            logger.error("Could not connection to db", e);
-            e.printStackTrace();
-        }
     }
 
     /**

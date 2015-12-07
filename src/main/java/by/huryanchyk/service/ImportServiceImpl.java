@@ -1,5 +1,7 @@
 package by.huryanchyk.service;
 
+import org.apache.log4j.Logger;
+
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
@@ -11,13 +13,14 @@ import java.util.concurrent.BlockingQueue;
  */
 public class ImportServiceImpl implements ImportService {
 
+    private final static Logger logger = Logger.getLogger(ImportServiceImpl.class);
+
+
     private BlockingQueue<String[]> usersQueueString = new ArrayBlockingQueue<>(1);
 
     private UserService userService;
 
     public ImportServiceImpl() {
-        Importer importer = new Importer(usersQueueString);
-        new Thread(importer).start();
     }
 
     @Override
@@ -25,7 +28,10 @@ public class ImportServiceImpl implements ImportService {
         usersQueueString.put(dataArray);
     }
 
-    @Override
+    public BlockingQueue<String[]> getUsersQueueString() {
+        return usersQueueString;
+    }
+
     public void setUserService(UserService userService) {
         this.userService = userService;
     }
@@ -35,7 +41,7 @@ public class ImportServiceImpl implements ImportService {
      * <p/>
      * The class for importing data from queue to database
      */
-    class Importer implements Runnable {
+    public class Importer implements Runnable {
 
         private BlockingQueue<String[]> blockingQueueString;
 
@@ -43,14 +49,22 @@ public class ImportServiceImpl implements ImportService {
             this.blockingQueueString = queue;
         }
 
+        private volatile boolean running = true;
+
+        public void terminate() {
+            running = false;
+        }
+
         @Override
         public void run() {
-            while (true) {
+            while (running) {
                 try {
+                    logger.debug("processing...");
                     String[] dataArray = blockingQueueString.take();
                     userService.addAllUsers(dataArray);
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    logger.error("interrupted exception", e);
+                    running = false;
                 }
             }
         }
