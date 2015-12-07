@@ -18,27 +18,11 @@ import java.util.List;
 @WebServlet(name = "UserServlet", urlPatterns = "/user")
 public class UserServlet extends HttpServlet {
 
-    /**
-     * Carries out http-servlet's request in the case of {@code post} request.
-     *
-     * @param request  is the http-servlet's request.
-     * @param response is the http-sevlet's response.
-     * @throws ServletException    if servlet error occurs.
-     * @throws java.io.IOException if input or output error occurs.
-     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         doGet(request, response);
     }
 
-    /**
-     * Carries out http-servlet's request in the case of {@code get} request.
-     *
-     * @param request  is the http-servlet's request.
-     * @param response is the http-sevlet's response.
-     * @throws ServletException    if servlet error occurs.
-     * @throws java.io.IOException if input or output error occurs.
-     */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         UserService userService = (UserService) getServletContext().getAttribute("userService");

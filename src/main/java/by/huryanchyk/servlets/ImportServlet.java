@@ -20,15 +20,6 @@ import java.io.*;
 @WebServlet(name = "ImportServlet", urlPatterns = "/import")
 public class ImportServlet extends HttpServlet {
 
-
-    /**
-     * Carries out http-servlet's request in the case of {@code post} request.
-     *
-     * @param request  is the http-servlet's request.
-     * @param response is the http-sevlet's response.
-     * @throws ServletException    if servlet error occurs.
-     * @throws java.io.IOException if input or output error occurs.
-     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         ImportService importService = (ImportService)getServletContext().getAttribute("importService");
