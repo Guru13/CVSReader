@@ -1,7 +1,12 @@
 package by.huryanchyk.service;
 
 import by.huryanchyk.dao.UserDAO;
+import by.huryanchyk.db.DAOManager;
+import by.huryanchyk.db.DAOManagerFactory;
+import by.huryanchyk.db.DAOManagerJDBCFactory;
 import by.huryanchyk.entity.User;
+import by.huryanchyk.exceptions.DaoException;
+import by.huryanchyk.exceptions.ServiceException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,11 +19,27 @@ import java.util.List;
  */
 public class UserServiceImpl implements UserService {
 
-    private UserDAO userDAO;
+
+    private DAOManagerFactory daoManagerFactory;
 
     @Override
     public List<User> currentUsersList(int offset, int noOfRecords, String compareMethod) {
-        return userDAO.currentUsersList(offset, noOfRecords, compareMethod);
+
+        try (DAOManager daoManager = daoManagerFactory.getDAOManager()) {
+            daoManager.beginTransaction();
+            try {
+                List<User> users = daoManager.getUserDAO().currentUsersList(offset, noOfRecords, compareMethod);
+                daoManager.commitTransaction();
+                return users;
+            }catch (Exception e){
+                    daoManager.rollbackTransaction();
+                    throw new ServiceException("what ", e);
+                }
+        }catch (DaoException e){
+            throw new ServiceException("currentUsersList method has throwen an exception", e);
+        } catch (Exception e) {
+            throw new ServiceException("autocloseable exception ", e);
+        }
     }
 
     @Override
@@ -38,18 +59,44 @@ public class UserServiceImpl implements UserService {
             String email = columns[3];
             String phoneNumber = columns[4];
             User user = new User(name, surname, login, email, phoneNumber);
+
             users.add(user);
         }
-        userDAO.addAllUsers(users);
+        try (DAOManager daoManager = daoManagerFactory.getDAOManager()) {
+            daoManager.beginTransaction();
+            try {
+                daoManager.getUserDAO().addAllUsers(users);
+                daoManager.commitTransaction();
+            } catch (DaoException e) {
+                daoManager.rollbackTransaction();
+                throw new ServiceException("addAllUsers method has throwen an exception", e);
+            }
+        } catch (Exception e) {
+            throw new ServiceException("autocloseable exception ", e);
+        }
     }
 
     @Override
     public long getNoOfRecords() {
-        return userDAO.getNoOfRecords();
+//        try {
+//            return userDAO.getNoOfRecords();
+//        }catch (DaoException e){
+//            throw new ServiceException("getNoOfRecords has throwen an exception", e);
+//        }
+        try (DAOManager daoManager = daoManagerFactory.getDAOManager()) {
+            return daoManager.getUserDAO().getNoOfRecords();
+        } catch (DaoException e) {
+            throw new ServiceException("getNoOfRecords has throwen an exception", e);
+        } catch (Exception e) {
+            throw new ServiceException("autocloseable exception ", e);
+        }
     }
 
-    public void setUserDAO(UserDAO userDAO) {
-        this.userDAO = userDAO;
-    }
+//    public void setUserDAO(UserDAO userDAO) {
+//        this.userDAO = userDAO;
+//    }
+public void setDaoManagerFactory(DAOManagerFactory daoManagerFactory) {
+    this.daoManagerFactory = daoManagerFactory;
+}
 
 }

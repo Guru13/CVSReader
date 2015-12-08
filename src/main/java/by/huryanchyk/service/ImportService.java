@@ -8,8 +8,6 @@ package by.huryanchyk.service;
  */
 public interface ImportService {
 
-//    void setUserService(UserService userService);
-
     /**
      * Adds text data to blocking queue
      *

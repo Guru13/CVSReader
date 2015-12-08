@@ -15,17 +15,17 @@ import java.util.*;
  * The class implements all the necessary methods
  * for manipulation with user's data in database.
  */
-public class UserDAOImpl implements UserDAO {
-
-    private final static Logger logger = Logger.getLogger(UserDAOImpl.class);
+public class UserDAOJDBCImpl implements UserDAO {
 
     private static final String SQL_GET_USERS_WITH_LIMIT = "SELECT name, surname, login, email, phoneNumber FROM user LIMIT ?, ? ";
     private static final String SQL_GET_USERS = "SELECT name, surname, login, email, phoneNumber FROM user;";
     private static final String SQL_INSERT = "INSERT INTO user (name, surname, login, email, phoneNumber) VALUES (?, ?, ?, ?, ?);";
     private static final String SQL_UPDATE = "UPDATE user SET name = ?, surname = ?, email = ?, phoneNumber = ? WHERE login = ?;";
 
-    public UserDAOImpl() {
+    private Connection connection;
 
+    public UserDAOJDBCImpl(Connection connection) {
+        this.connection = connection;
     }
 
     @Override
@@ -33,8 +33,7 @@ public class UserDAOImpl implements UserDAO {
 
         List<User> listUsers = new ArrayList<User>();
         User user;
-        try (Connection connection = ConnectionFactory.getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQL_GET_USERS_WITH_LIMIT);) {
+        try (PreparedStatement statement = connection.prepareStatement(SQL_GET_USERS_WITH_LIMIT);) {
 
             statement.setInt(1, offset);
             statement.setInt(2, noOfRecords);
@@ -52,12 +51,10 @@ public class UserDAOImpl implements UserDAO {
                     listUsers.add(user);
                 }
             } catch (SQLException e) {
-                logger.error("Could not execute result set", e);
-                throw new DaoException("Could not exexucute result set", e);
+                throw new DaoException("Could not exexucute result set and get users", e);
             }
-        } catch (ClassNotFoundException | SQLException e) {
-            logger.error("Could not connection to db", e);
-            throw new DaoException("Could not connection to db", e);
+        } catch (SQLException e) {
+            throw new DaoException("Could not get statement  and get users", e);
         }
 
         sortBy(compareMethod, listUsers);
@@ -72,7 +69,7 @@ public class UserDAOImpl implements UserDAO {
         List<User> listUsers = new ArrayList<User>();
         User user;
 
-        try (Connection connection = ConnectionFactory.getConnection(); Statement statement = connection.createStatement();
+        try (Statement statement = connection.createStatement();
              ResultSet rs = statement.executeQuery(query)) {
 
             while (rs.next()) {
@@ -84,12 +81,8 @@ public class UserDAOImpl implements UserDAO {
                 user.setPhoneNumber(rs.getString("phoneNumber"));
                 listUsers.add(user);
             }
-        } catch (ClassNotFoundException e) {
-            logger.error("Could not connection to db", e);
-            throw new DaoException("Could not connection to db", e);
         } catch (SQLException e) {
-            logger.error("Could not execute result set", e);
-            throw new DaoException("Could not exexucute result set", e);
+            throw new DaoException("Could not exexucute result set or get statement and get all users", e);
         }
 
         return listUsers;
@@ -97,7 +90,7 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public void addAllUsers(List<User> users) {
-        try (Connection connection = ConnectionFactory.getConnection(); PreparedStatement statement = connection.prepareStatement(SQL_INSERT);) {
+        try (PreparedStatement statement = connection.prepareStatement(SQL_INSERT);) {
             for (User user : users) {
                 if (userExistLogin(user)) {
                     userUpdate(user);
@@ -111,12 +104,8 @@ public class UserDAOImpl implements UserDAO {
                 }
             }
             statement.executeBatch();
-        } catch (ClassNotFoundException e) {
-            logger.error("Could not connection to db", e);
-            throw new DaoException("Could not connection to db", e);
         } catch (SQLException e) {
-            logger.error("Could not execute result set", e);
-            throw new DaoException("Could not exexucute result set", e);
+            throw new DaoException("Could not exexucute result set or get statement and add users", e);
         }
     }
 
@@ -154,19 +143,15 @@ public class UserDAOImpl implements UserDAO {
      */
     private void userUpdate(User user) {
 
-        try (Connection connection = ConnectionFactory.getConnection(); PreparedStatement statement = connection.prepareStatement(SQL_UPDATE);) {
+        try (PreparedStatement statement = connection.prepareStatement(SQL_UPDATE);) {
             statement.setString(1, user.getName());
             statement.setString(2, user.getSurName());
             statement.setString(3, user.getEmail());
             statement.setString(4, user.getPhoneNumber());
             statement.setString(5, user.getLogin());
             statement.executeUpdate();
-        } catch (ClassNotFoundException e) {
-            logger.error("Could not connection to db", e);
-            throw new DaoException("Could not connection to db", e);
         } catch (SQLException e) {
-            logger.error("Could not execute result set", e);
-            throw new DaoException("Could not exexucute result set", e);
+            throw new DaoException("Could not exexucute result set and update user", e);
         }
     }
 

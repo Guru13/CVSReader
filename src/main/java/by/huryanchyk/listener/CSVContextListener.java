@@ -1,7 +1,8 @@
 package by.huryanchyk.listener;
 
-import by.huryanchyk.dao.UserDAO;
-import by.huryanchyk.dao.UserDAOImpl;
+
+import by.huryanchyk.db.DAOManagerFactory;
+import by.huryanchyk.db.DAOManagerJDBCFactory;
 import by.huryanchyk.service.ImportServiceImpl;
 import by.huryanchyk.service.UserServiceImpl;
 import org.apache.log4j.Logger;
@@ -11,6 +12,7 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
+
 /**
  * Created by Alexei Huryanchyk on 05.12.2015.
  * <p/>
@@ -18,6 +20,7 @@ import javax.servlet.annotation.WebListener;
  */
 @WebListener
 public class CSVContextListener implements ServletContextListener {
+
 
     private final static Logger logger = Logger.getLogger(UserServiceImpl.class);
 
@@ -37,9 +40,10 @@ public class CSVContextListener implements ServletContextListener {
         thread.start();
         logger.debug("Background process successfully started.");
 
-        UserDAO userDAO = new UserDAOImpl();
 
-        userService.setUserDAO(userDAO);
+        DAOManagerFactory daoManagerFactory = new DAOManagerJDBCFactory();
+
+        userService.setDaoManagerFactory(daoManagerFactory);
         importService.setUserService(userService);
 
         servletContext.setAttribute("userService", userService);

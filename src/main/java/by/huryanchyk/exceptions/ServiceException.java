@@ -3,17 +3,18 @@ package by.huryanchyk.exceptions;
 /**
  Created by Alexei Huryanchyk on 05.12.2015.
  * <p/>
- * Throw of dao layer
+ * Throw of service layer
  */
-public class DaoException extends RuntimeException {
+public class ServiceException extends RuntimeException {
 
     /**
-     * Throw of dao layer
+     * Throw of service layer
      *
      * @param message mistakes message
      * @param cause   cause of exception
      */
-    public DaoException(String message, Throwable cause) {
+    public ServiceException(String message, Throwable cause) {
         super(message, cause);
     }
+
 }
