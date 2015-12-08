@@ -1,8 +1,8 @@
 package by.huryanchyk.exceptions;
 
 /**
- Created by Alexei Huryanchyk on 05.12.2015.
- * <p/>
+ * Created by Alexei Huryanchyk on 05.12.2015.
+ * <p>
  * Throw of service layer
  */
 public class ServiceException extends RuntimeException {

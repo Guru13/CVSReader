@@ -1,11 +1,12 @@
 package by.huryanchyk.service;
 
 import by.huryanchyk.entity.User;
+
 import java.util.List;
 
 /**
  * Created by Alexei Huryanchyk on 05.12.2015.
- * <p/>
+ * <p>
  * The interface has methods
  * for manipulation with user's data.
  */
@@ -13,9 +14,10 @@ public interface UserService {
 
     /**
      * Gets current list of users
-     *<p/>
+     * <p>
      * starting counting users from @param offset
-     * @param noOfRecords number of records on the page
+     *
+     * @param noOfRecords   number of records on the page
      * @param compareMethod method for compare users
      * @return
      */

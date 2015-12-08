@@ -2,7 +2,7 @@ package by.huryanchyk.service;
 
 /**
  * Created by Alexei Huryanchyk on 05.12.2015.
- * <p/>
+ * <p>
  * The  class stores values for pagination and sorting
  */
 public class Pager {
@@ -14,7 +14,7 @@ public class Pager {
     /**
      * Sets default params
      */
-    public void setDefaultParams(){
+    public void setDefaultParams() {
         recordsPerPage = 10;
         sortedMethod = "name";
         currentPage = 1;

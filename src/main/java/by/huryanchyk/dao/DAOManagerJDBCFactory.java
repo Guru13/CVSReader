@@ -1,5 +1,6 @@
-package by.huryanchyk.db;
+package by.huryanchyk.dao;
 
+import by.huryanchyk.db.ConnectionFactory;
 import by.huryanchyk.exceptions.DaoException;
 
 import java.sql.SQLException;
@@ -9,7 +10,7 @@ import java.sql.SQLException;
  */
 public class DAOManagerJDBCFactory implements DAOManagerFactory {
 
-    public DAOManager getDAOManager()  {
+    public DAOManager getDAOManager() {
         try {
             return new DAOManagerJDBCImpl(ConnectionFactory.getConnection());
         } catch (SQLException | ClassNotFoundException e) {

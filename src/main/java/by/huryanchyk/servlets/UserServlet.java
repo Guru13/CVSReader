@@ -21,7 +21,7 @@ import java.util.List;
 @WebServlet(name = "UserServlet", urlPatterns = "/user")
 public class UserServlet extends HttpServlet {
 
-    private final static Logger logger = Logger.getLogger(UserServlet.class);
+    private final static Logger LOGGER = Logger.getLogger(UserServlet.class);
     Pager pager = new Pager();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -65,7 +65,7 @@ public class UserServlet extends HttpServlet {
             RequestDispatcher view = request.getRequestDispatcher("views/displayUser.jsp");
             view.forward(request, response);
         } catch (Exception e) {
-            logger.error("DispatcherServlet has thrown an exception", e);
+            LOGGER.error("DispatcherServlet has thrown an exception", e);
             throw new ServletException(e);
         }
     }

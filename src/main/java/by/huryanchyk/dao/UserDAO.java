@@ -1,11 +1,12 @@
 package by.huryanchyk.dao;
 
 import by.huryanchyk.entity.User;
+
 import java.util.List;
 
 /**
  * Created by Alexei Huryanchyk on 05.12.2015.
- * <p/>
+ * <p>
  * The interface has all the necessary methods
  * for manipulation with user's data in database.
  */

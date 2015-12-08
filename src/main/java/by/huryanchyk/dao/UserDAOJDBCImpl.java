@@ -1,9 +1,8 @@
 package by.huryanchyk.dao;
 
-import by.huryanchyk.db.ConnectionFactory;
 import by.huryanchyk.entity.User;
 import by.huryanchyk.exceptions.DaoException;
-import org.apache.log4j.Logger;
+
 
 import java.sql.*;
 import java.util.*;
@@ -11,7 +10,7 @@ import java.util.*;
 
 /**
  * Created by Alexei Huryanchyk on 05.12.2015.
- * <p/>
+ * <p>
  * The class implements all the necessary methods
  * for manipulation with user's data in database.
  */

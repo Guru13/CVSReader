@@ -23,9 +23,9 @@ import java.io.*;
 @WebServlet(name = "ImportServlet", urlPatterns = "/import")
 public class ImportServlet extends HttpServlet {
 
-    private final static Logger logger = Logger.getLogger(UserServlet.class);
+    private final static Logger LOGGER = Logger.getLogger(UserServlet.class);
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException{
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException {
         try {
             ImportService importService = (ImportService) getServletContext().getAttribute("importService");
             ServletInputStream in = request.getInputStream();
@@ -47,7 +47,7 @@ public class ImportServlet extends HttpServlet {
 
             response.sendRedirect("views/successImport.jsp");
         } catch (Exception e) {
-            logger.error("DispatcherServlet has thrown an exception", e);
+            LOGGER.error("Servlet has thrown an exception", e);
             throw new ServletException(e);
         }
     }

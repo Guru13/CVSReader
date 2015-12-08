@@ -1,6 +1,5 @@
-package by.huryanchyk.db;
+package by.huryanchyk.dao;
 
-import by.huryanchyk.dao.UserDAO;
 
 /**
  * Created by Alexei Huryanchyk on 05.12.2015.
@@ -20,7 +19,7 @@ public interface DAOManager extends AutoCloseable {
     void commitTransaction();
 
     /**
-     *Cancels transaction
+     * Cancels transaction
      */
     void rollbackTransaction();
 }

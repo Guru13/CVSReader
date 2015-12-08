@@ -1,7 +1,7 @@
 package by.huryanchyk.service;
 
-import by.huryanchyk.db.DAOManager;
-import by.huryanchyk.db.DAOManagerFactory;
+import by.huryanchyk.dao.DAOManager;
+import by.huryanchyk.dao.DAOManagerFactory;
 import by.huryanchyk.entity.User;
 import by.huryanchyk.exceptions.DaoException;
 import by.huryanchyk.exceptions.ServiceException;

@@ -2,7 +2,7 @@ package by.huryanchyk.entity;
 
 /**
  * Created by Alexei Huryanchyk on 05.12.2015.
- * <p/>
+ * <p>
  * The {@code User} class is an entity-class which includes all
  * the necessary getters and setters for its fields and also overrides
  * {@code equals()}, {@code hashCode()} and {@code toString()}.
@@ -176,12 +176,13 @@ public class User {
      */
     @Override
     public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", surName='" + surName + '\'' +
-                ", login='" + login + '\'' +
-                ", email='" + email + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                '}';
+        final StringBuilder sb = new StringBuilder("User{");
+        sb.append("name='").append(name).append('\'');
+        sb.append(", surName='").append(surName).append('\'');
+        sb.append(", login='").append(login).append('\'');
+        sb.append(", email='").append(email).append('\'');
+        sb.append(", phoneNumber='").append(phoneNumber).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 }

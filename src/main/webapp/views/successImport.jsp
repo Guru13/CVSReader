@@ -5,7 +5,7 @@
     <title>success</title>
 </head>
 <body>
-<h2>The data have imported successfully.</h2>
+<h2>The data added to queue. </h2>
 <br/>
 <a href="${pageContext.servletContext.contextPath}/index.jsp">back to menu</a>
 </body>

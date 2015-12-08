@@ -1,7 +1,6 @@
-package by.huryanchyk.db;
+package by.huryanchyk.dao;
 
-import by.huryanchyk.dao.UserDAO;
-import by.huryanchyk.dao.UserDAOJDBCImpl;
+import by.huryanchyk.exceptions.DaoException;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -27,11 +26,11 @@ public class DAOManagerJDBCImpl implements DAOManager {
     }
 
     @Override
-    public void beginTransaction()  {
+    public void beginTransaction() {
         try {
             getConnection().setAutoCommit(false);
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new DaoException("Can't commit transaction", e);
         }
     }
 
@@ -40,7 +39,7 @@ public class DAOManagerJDBCImpl implements DAOManager {
         try {
             getConnection().commit();
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new DaoException("Can't commit transaction", e);
         }
     }
 
@@ -49,7 +48,7 @@ public class DAOManagerJDBCImpl implements DAOManager {
         try {
             getConnection().rollback();
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new DaoException("Can't commit transaction", e);
         }
     }
 
@@ -58,9 +57,13 @@ public class DAOManagerJDBCImpl implements DAOManager {
     }
 
     @Override
-    public void close() throws Exception {
+    public void close() {
         if (getConnection() != null) {
-            getConnection().close();
+            try {
+                getConnection().close();
+            } catch (SQLException e) {
+                throw new DaoException("Can't commit transaction", e);
+            }
         }
     }
 }

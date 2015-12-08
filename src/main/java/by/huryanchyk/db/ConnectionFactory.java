@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 /**
  * Created by Alexei Huryanchyk on 05.12.2015.
- *
+ * <p>
  * The  class represents an ability to connect with database.
  */
 public class ConnectionFactory {

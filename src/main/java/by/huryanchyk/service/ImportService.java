@@ -2,7 +2,7 @@ package by.huryanchyk.service;
 
 /**
  * Created by Alexei Huryanchyk on 05.12.2015.
- * <p/>
+ * <p>
  * The interface has methods for conversion data in file
  * and importing it into database
  */

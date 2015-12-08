@@ -1,4 +1,5 @@
-package by.huryanchyk.db;
+package by.huryanchyk.dao;
+
 
 /**
  * Created by Alexei Huryanchyk on 05.12.2015.

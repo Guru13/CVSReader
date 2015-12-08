@@ -7,13 +7,13 @@ import java.util.concurrent.BlockingQueue;
 
 /**
  * Created by Alexei Huryanchyk on 05.12.2015.
- * <p/>
+ * <p>
  * The class implements methods for conversion data in file
  * and importing it into database
  */
 public class ImportServiceImpl implements ImportService {
 
-    private final static Logger logger = Logger.getLogger(ImportServiceImpl.class);
+    private final static Logger LOGGER = Logger.getLogger(ImportServiceImpl.class);
 
 
     private BlockingQueue<String[]> usersQueueString = new ArrayBlockingQueue<>(1);
@@ -38,7 +38,7 @@ public class ImportServiceImpl implements ImportService {
 
     /**
      * Created by Alexey Guryanchyck on 05.12.2015.
-     * <p/>
+     * <p>
      * The class for importing data from queue to database
      */
     public class Importer implements Runnable {
@@ -59,11 +59,11 @@ public class ImportServiceImpl implements ImportService {
         public void run() {
             while (running) {
                 try {
-                    logger.debug("processing...");
+                    LOGGER.debug("processing...");
                     String[] dataArray = blockingQueueString.take();
                     userService.addAllUsers(dataArray);
                 } catch (InterruptedException e) {
-                    logger.error("interrupted exception", e);
+                    LOGGER.error("interrupted exception", e);
                     running = false;
                 }
             }

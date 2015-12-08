@@ -8,21 +8,21 @@ import java.util.Properties;
 
 /**
  * Created by Alexei Huryanchyk on 05.12.2015..
- *
+ * <p>
  * Class for getting properties for connection with database
  */
 public class Settings {
 
-    private final static Logger logger = Logger.getLogger(Settings.class);
+    private final static Logger LOGGER = Logger.getLogger(Settings.class);
 
     private static final Properties properties = new Properties();
 
-    public static String value(String key){
+    public static String value(String key) {
         try {
             properties.load(new FileInputStream(Settings.class.getClassLoader().getResource("jdbc.properties").getFile()));
 
         } catch (IOException e) {
-            logger.error("Could not load file", e);
+            LOGGER.error("Could not load file", e);
         }
         return properties.getProperty(key);
     }
