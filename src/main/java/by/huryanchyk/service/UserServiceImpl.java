@@ -1,9 +1,7 @@
 package by.huryanchyk.service;
 
-import by.huryanchyk.dao.UserDAO;
 import by.huryanchyk.db.DAOManager;
 import by.huryanchyk.db.DAOManagerFactory;
-import by.huryanchyk.db.DAOManagerJDBCFactory;
 import by.huryanchyk.entity.User;
 import by.huryanchyk.exceptions.DaoException;
 import by.huryanchyk.exceptions.ServiceException;
@@ -13,7 +11,7 @@ import java.util.List;
 
 /**
  * Created by Alexei Huryanchyk on 05.12.2015.
- * <p/>
+ * <p>
  * The class has methods
  * for manipulation with user's data.
  */
@@ -31,11 +29,11 @@ public class UserServiceImpl implements UserService {
                 List<User> users = daoManager.getUserDAO().currentUsersList(offset, noOfRecords, compareMethod);
                 daoManager.commitTransaction();
                 return users;
-            }catch (Exception e){
-                    daoManager.rollbackTransaction();
-                    throw new ServiceException("what ", e);
-                }
-        }catch (DaoException e){
+            } catch (Exception e) {
+                daoManager.rollbackTransaction();
+                throw new ServiceException("what ", e);
+            }
+        } catch (DaoException e) {
             throw new ServiceException("currentUsersList method has throwen an exception", e);
         } catch (Exception e) {
             throw new ServiceException("autocloseable exception ", e);
@@ -78,11 +76,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public long getNoOfRecords() {
-//        try {
-//            return userDAO.getNoOfRecords();
-//        }catch (DaoException e){
-//            throw new ServiceException("getNoOfRecords has throwen an exception", e);
-//        }
         try (DAOManager daoManager = daoManagerFactory.getDAOManager()) {
             return daoManager.getUserDAO().getNoOfRecords();
         } catch (DaoException e) {
@@ -92,11 +85,7 @@ public class UserServiceImpl implements UserService {
         }
     }
 
-//    public void setUserDAO(UserDAO userDAO) {
-//        this.userDAO = userDAO;
-//    }
-public void setDaoManagerFactory(DAOManagerFactory daoManagerFactory) {
-    this.daoManagerFactory = daoManagerFactory;
-}
-
+    public void setDaoManagerFactory(DAOManagerFactory daoManagerFactory) {
+        this.daoManagerFactory = daoManagerFactory;
+    }
 }
