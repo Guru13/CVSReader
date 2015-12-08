@@ -40,7 +40,6 @@ public class CSVContextListener implements ServletContextListener {
         thread.start();
         logger.debug("Background process successfully started.");
 
-
         DAOManagerFactory daoManagerFactory = new DAOManagerJDBCFactory();
 
         userService.setDaoManagerFactory(daoManagerFactory);
